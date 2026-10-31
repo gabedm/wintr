@@ -1,0 +1,30 @@
+Apple artwork, iTunes Store badge and Apple Music icon
+
+The iTunes Store small badge is an unmodified Apple marketing asset, governed
+by Apple's identity guidelines rather than the Wintr source MIT licence.
+The current interface does not render this retained historical badge asset.
+Search API covers promote that recording only; no preview audio is downloaded.
+
+Badge source: official US/UK iTunes Store badge bundle, Small_Badge/
+iTunes_Store_Small_Badge_RGB_012318.svg. SHA-256:
+35013ee9a557b4f68e4a8e6572672766e5aa5e40d268ec41ca514c1c55bd3355
+
+https://marketing.services.apple/itunes-identity-guidelines
+https://performance-partners.apple.com/search-api
+
+The Apple Music icon is an unmodified Apple marketing asset, distributed from
+Apple's official Apple Music_Icon_2020 pack. Its compact in-app link opens the
+verified Apple Music recording; it does not grant music playback or audio rights.
+Member: AppleMusic_Icon_BlackandWhite/SVG/Small/
+Apple_Music_Icon_blk_sm_073120.svg
+SHA-256: d51c879f1ba6e58a460f258a4b811b0d93b2176259e8ec3a8195092c389bdd95
+https://marketing.services.apple/apple-music-identity-guidelines
+https://apple.co/am-icon-2020
+
+Apple and Apple Music are trademarks of Apple Inc., registered in the U.S. and other countries. iTunes Store is a service mark of Apple Inc.
+
+Wintr interface references
+
+The snowflake and navigation icons are SVG implementations. No Shazam screen, photo or watermark is shipped.
+Provider event photos and optional recording covers belong to their respective
+rights holders and are not licensed as original Wintr artwork.

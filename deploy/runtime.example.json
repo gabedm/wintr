@@ -1,0 +1,5 @@
+{
+  "bindings": null,
+  "serviceAccountEmail": "runtime@your-project.iam.gserviceaccount.com",
+  "storefront": "us"
+}

@@ -1,0 +1,385 @@
+{
+  "schema_version": 1,
+  "transitions": [
+    {
+      "id": "M01.intro",
+      "duration_ms": {
+        "card": 280,
+        "motifs": 240,
+        "motif_stagger": 40,
+        "maximum_total": 400
+      },
+      "properties_and_geometry": {
+        "card": {
+          "opacity": [
+            0,
+            1
+          ],
+          "translate_y_css_px": [
+            8,
+            0
+          ]
+        },
+        "five_original_small_motifs": {
+          "opacity": [
+            0,
+            1
+          ],
+          "scale": [
+            0.92,
+            1
+          ]
+        }
+      }
+    },
+    {
+      "id": "M01.suggestions",
+      "duration_ms": {
+        "enter": 180,
+        "exit": 100,
+        "stagger": 0
+      },
+      "properties_and_geometry": {
+        "enter": {
+          "opacity": [
+            0,
+            1
+          ],
+          "translate_y_css_px": [
+            4,
+            0
+          ]
+        },
+        "exit": {
+          "opacity": [
+            1,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "id": "M01.guide",
+      "duration_ms": {
+        "page_change": 220,
+        "pagination": 160
+      },
+      "properties_and_geometry": {
+        "outgoing": {
+          "opacity": [
+            1,
+            0
+          ],
+          "translate_x_css_px": [
+            0,
+            -12
+          ]
+        },
+        "incoming": {
+          "opacity": [
+            0,
+            1
+          ],
+          "translate_x_css_px": [
+            12,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "id": "M02.keyboard",
+      "duration_ms": {
+        "app_added_delay": 0,
+        "app_added_keyboard_animation": 0
+      },
+      "properties_and_geometry": {}
+    },
+    {
+      "id": "M03.growth",
+      "duration_ms": {
+        "height_change": 160,
+        "resize_while_keyboard_moving": 0
+      },
+      "properties_and_geometry": {}
+    },
+    {
+      "id": "M03.send",
+      "duration_ms": {
+        "welcome_exit": 120,
+        "user_message_enter": 220,
+        "composer_reset": 160
+      },
+      "properties_and_geometry": {
+        "welcome_exit": {
+          "opacity": [
+            1,
+            0
+          ]
+        },
+        "user_message": {
+          "opacity": [
+            0,
+            1
+          ],
+          "translate_y_css_px": [
+            8,
+            0
+          ],
+          "scale": 1
+        }
+      }
+    },
+    {
+      "id": "M03.control",
+      "duration_ms": {
+        "press": 80,
+        "release": 120,
+        "icon_crossfade": 100,
+        "toggle": 160
+      },
+      "properties_and_geometry": {
+        "press": {
+          "scale": [
+            1,
+            0.97
+          ]
+        },
+        "release": {
+          "scale": [
+            0.97,
+            1
+          ]
+        }
+      }
+    },
+    {
+      "id": "M03.cancel",
+      "duration_ms": {
+        "semantic_cancellation": 0,
+        "pending_exit": 100,
+        "settled_state": 160
+      },
+      "properties_and_geometry": {
+        "pending": {
+          "opacity": [
+            1,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "id": "M04.pending",
+      "duration_ms": {
+        "enter": 120,
+        "dot_cycle": 900,
+        "dot_phase_step": 100,
+        "stage_crossfade": 120,
+        "exit": 100
+      },
+      "properties_and_geometry": {}
+    },
+    {
+      "id": "M04.result",
+      "duration_ms": {
+        "pending_exit": 100,
+        "complete_unit_enter": 240
+      },
+      "properties_and_geometry": {
+        "answer_outer_wrapper": {
+          "opacity": [
+            0,
+            1
+          ],
+          "translate_y_css_px": [
+            6,
+            0
+          ],
+          "scale": 1
+        }
+      }
+    },
+    {
+      "id": "M04.refine",
+      "duration_ms": {
+        "new_message": "use M03.send",
+        "reveal": "use M04.result",
+        "auto_follow": 180
+      },
+      "properties_and_geometry": {}
+    },
+    {
+      "id": "M05.rail",
+      "duration_ms": {
+        "native_drag": "platform controlled",
+        "arrow_scroll": 240,
+        "zero_distance": 0
+      },
+      "properties_and_geometry": {}
+    },
+    {
+      "id": "M06.sheet",
+      "duration_ms": {
+        "enter": 360,
+        "exit": 260,
+        "scrim_enter": 220,
+        "scrim_exit": 180,
+        "drag_return": 220
+      },
+      "properties_and_geometry": {
+        "panel_enter": {
+          "translate_y": [
+            "100% of own height plus bottom gap",
+            "0"
+          ],
+          "opacity": 1
+        },
+        "panel_exit": {
+          "translate_y": [
+            "current position",
+            "100% of own height plus bottom gap"
+          ]
+        },
+        "scrim": {
+          "opacity": [
+            0,
+            0.46
+          ],
+          "no_animated_blur": true
+        }
+      }
+    },
+    {
+      "id": "M06.nested",
+      "duration_ms": {
+        "enter": 320,
+        "exit": 240,
+        "underlay_dim": 180
+      },
+      "properties_and_geometry": {}
+    },
+    {
+      "id": "M07.drawer",
+      "duration_ms": {
+        "enter": 300,
+        "exit": 220,
+        "scrim_enter": 220,
+        "scrim_exit": 180
+      },
+      "properties_and_geometry": {
+        "drawer_enter": {
+          "translate_x": [
+            "-100% of own width minus gutter",
+            "0"
+          ],
+          "opacity": 1
+        },
+        "drawer_exit": {
+          "translate_x": [
+            "current position",
+            "-100% of own width minus gutter"
+          ]
+        }
+      }
+    },
+    {
+      "id": "M07.page",
+      "duration_ms": {
+        "page_change": 220,
+        "drawer_exit": "overlap M07.drawer"
+      },
+      "properties_and_geometry": {
+        "forward": {
+          "incoming_opacity": [
+            0,
+            1
+          ],
+          "incoming_translate_x_css_px": [
+            12,
+            0
+          ],
+          "outgoing_opacity": [
+            1,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "id": "M07.selection",
+      "duration_ms": {
+        "row_state": 160,
+        "token_enter": 160,
+        "token_exit": 120
+      },
+      "properties_and_geometry": {
+        "token_enter": {
+          "opacity": [
+            0,
+            1
+          ],
+          "translate_y_css_px": [
+            3,
+            0
+          ]
+        },
+        "token_exit": {
+          "opacity": [
+            1,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "id": "M08.notice",
+      "duration_ms": {
+        "enter": 220,
+        "exit": 180,
+        "optional_nonessential_hold": 4000
+      },
+      "properties_and_geometry": {
+        "enter": {
+          "opacity": [
+            0,
+            1
+          ],
+          "translate_y_css_px": [
+            -12,
+            0
+          ]
+        },
+        "exit": {
+          "opacity": [
+            1,
+            0
+          ],
+          "translate_y_css_px": [
+            0,
+            -8
+          ]
+        }
+      }
+    },
+    {
+      "id": "M08.recovery",
+      "duration_ms": {
+        "state_crossfade": 160,
+        "privacy_revocation": 0
+      },
+      "properties_and_geometry": {}
+    }
+  ],
+  "theme_update": {
+    "emblem_extension": {
+      "fill": {
+        "duration_ms": 600,
+        "easing_token": "enter"
+      },
+      "breath": {
+        "cycle_ms": 1800
+      }
+    }
+  }
+}

@@ -1,0 +1,1427 @@
+/*
+ * White theme: a white canvas with black text, controls and
+ * lines; black chat boxes and the composer carry white text. Monochrome only:
+ * state is carried by fill, weight, border style and text, never
+ * by hue. The mobile interface uses self-hosted Inter throughout.
+ */
+:root {
+  --canvas: #fff;
+  --surface: #fff;
+  --subtle: #f0f0f0;
+  --ink: #000;
+  --on-ink: #fff;
+  --muted: #4d4d4d;
+  --line: #d0d0d0;
+  --boundary: #000;
+  --focus: #000;
+  --reading-width: 960px;
+  --sans: 'Inter', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+  color-scheme: light;
+  background: var(--canvas);
+  color: var(--ink);
+  font: 400 16px/24px var(--sans);
+  -webkit-text-size-adjust: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+  background: var(--canvas);
+}
+
+body {
+  min-height: 100dvh;
+}
+
+p,
+h1,
+h2 {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+  width: 100%;
+  max-width: 1480px;
+  margin: 0 auto;
+  /* The bottom padding is the one keyboard offset (see viewport.ts): it keeps all content reachable above the composer. */
+  padding: max(8px, env(safe-area-inset-top)) max(16px, env(safe-area-inset-right)) var(--kb-inset, 0px) max(16px, env(safe-area-inset-left));
+}
+
+@media (min-width: 720px) {
+  .app {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+/*
+ * The emblem sits centred between two fixed 80 px slots with a 44 px sidebar control, so its place never depends on whether
+ * the edit action exists. Its size is fixed, so drawing it never moves the reading position.
+ */
+.header {
+  display: grid;
+  grid-template-columns: 112px minmax(64px, 1fr) 112px;
+  align-items: center;
+  justify-items: center;
+  min-height: 80px;
+  padding: 8px 0;
+}
+.header > .emblem { width: 64px; height: 64px; }
+.conversation, .composer-context, .composer-wrap { width: 100%; max-width: var(--reading-width); margin-left: auto; margin-right: auto; }
+
+.header > .session-trigger,
+.header > .source-actions,
+.header > .header-slot {
+  width: 44px;
+  height: 44px;
+}
+
+.header > .source-actions { margin-top: 0; }
+
+.session-trigger {
+  display: inline-grid;
+  place-items: center;
+  justify-self: start;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 0;
+  border-radius: 22px;
+  background: transparent;
+  color: var(--ink);
+  cursor: pointer;
+}
+
+.session-trigger:hover { background: var(--subtle); }
+
+.header-new-chat { display: inline-flex; align-items: center; justify-content: center; gap: 8px; justify-self: end; min-width: 112px; min-height: 44px; padding: 0 8px; border: 0; border-radius: 12px; background: transparent; color: var(--ink); font: 500 14px/20px var(--sans); white-space: nowrap; cursor: pointer; }
+.header-new-chat > span:first-child { font-size: 23px; font-weight: 400; }
+.header-new-chat:hover { background: var(--subtle); }
+.chat-sidebar { min-width: 0; display: flex; flex-direction: column; gap: 12px; }
+.new-chat-action { display: flex; align-items: center; gap: 10px; min-height: 44px; width: 100%; padding: 10px 12px; background: var(--ink); color: var(--on-ink); border: 1px solid var(--ink); border-radius: 14px; font: 500 15px/22px var(--sans); cursor: pointer; }
+.recent-label { margin: 8px 0 0; color: var(--muted); font: 400 12px/18px var(--sans); }
+.chat-list { display: flex; flex-direction: column; gap: 4px; margin: 0; padding: 0; list-style: none; min-width: 0; }
+.chat-list > li { min-width: 0; border-radius: 14px; }
+.chat-row { display: flex; align-items: center; min-width: 0; }
+.chat-select { flex: 1; min-width: 0; min-height: 44px; padding: 10px 10px; border: 0; border-radius: 14px; background: transparent; color: var(--ink); font: 400 15px/22px var(--sans); text-align: left; overflow-wrap: anywhere; cursor: pointer; }
+.chat-select[aria-current="page"] { background: var(--subtle); font-weight: 500; }
+.chat-select:hover, .chat-options:hover { background: var(--subtle); }
+.chat-options { flex: 0 0 44px; min-height: 44px; padding: 0; border: 0; border-radius: 14px; background: transparent; color: var(--ink); font: 500 23px/24px var(--sans); cursor: pointer; }
+.chat-row-actions { display: flex; flex-wrap: wrap; gap: 4px; padding: 4px; }
+.chat-row-actions button { min-height: 44px; padding: 8px; border: 1px solid var(--line); border-radius: 12px; background: var(--surface); color: var(--ink); font: 400 13px/20px var(--sans); cursor: pointer; }
+.chat-rename { display: flex; flex-direction: column; gap: 6px; padding: 8px 0; min-width: 0; }
+.chat-rename label { font-size: 13px; line-height: 20px; }
+.chat-rename input { min-width: 0; width: 100%; min-height: 44px; border: 1px solid var(--ink); border-radius: 12px; padding: 8px; background: var(--surface); color: var(--ink); font: 400 15px/22px var(--sans); }
+.chat-empty { display: flex; flex-direction: column; gap: 8px; padding: 28px 10px; color: var(--muted); font-size: 14px; line-height: 21px; }
+.chat-page-ghost { contain: layout paint; }
+
+/* Original snowflake: heavy clear outline, with factual bands inked from the centre out. */
+.emblem {
+  display: block;
+  width: 96px;
+  height: 96px;
+  color: var(--ink);
+  pointer-events: none;
+}
+
+@media (min-width: 720px) {
+  .emblem {
+    width: 128px;
+    height: 128px;
+  }
+}
+
+.emblem .track path,
+.emblem .track circle {
+  stroke: currentColor;
+  stroke-opacity: 1;
+  stroke-width: 8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.emblem .track path { fill: none; }
+.emblem .track circle { fill: var(--canvas); }
+
+/* Work in flight: only the next unfinished ring breathes, in phase (--emblem-breath is written only while it runs). */
+.emblem .ring[data-frontier] .track path,
+.emblem .ring[data-frontier] .track circle {
+  stroke-opacity: calc(0.55 + 0.45 * var(--emblem-breath, 0.5));
+}
+
+.emblem .ink path {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 1 1;
+  stroke-dashoffset: calc(1 - var(--r, 0));
+}
+.emblem .ink path.core { fill: currentColor; fill-opacity: var(--r, 0); }
+
+.emblem .ink circle {
+  fill: currentColor;
+  fill-opacity: var(--r, 0);
+  stroke: currentColor;
+  stroke-opacity: var(--r, 0);
+  stroke-width: 8;
+}
+
+.new-reference { color: var(--ink); }
+
+.icon-button {
+  display: inline-grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border: 0;
+  border-radius: 22px;
+  background: transparent;
+  color: var(--ink);
+  cursor: pointer;
+}
+
+.icon-button:hover {
+  background: var(--subtle);
+}
+
+.mode-note {
+  align-self: flex-start;
+  margin: 0 0 12px;
+  padding: 0;
+  color: var(--muted);
+  font: 400 12px/17px var(--sans);
+}
+
+.conversation {
+  position: relative;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 24px;
+  min-width: 0;
+  padding-bottom: 24px;
+}
+
+/* Entry: the original emblem is the sole visual; the composer remains the action. */
+.intro {
+  display: flex;
+  flex: 1;
+  min-height: 240px;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 0;
+  text-align: center;
+}
+
+.intro > div {
+  min-width: 0;
+}
+
+.intro-emblem .emblem { width: clamp(192px, 28vmin, 280px); height: clamp(192px, 28vmin, 280px); }
+.intro .ring { transform-origin: 64px 64px; }
+.intro .ring-0 { --boot-band: var(--motif-0, 1); opacity: var(--boot-band); transform: scale(calc(.92 + .08 * var(--boot-band))); }
+.intro .ring-1 { --boot-band: var(--motif-1, 1); opacity: var(--boot-band); transform: scale(calc(.92 + .08 * var(--boot-band))); }
+.intro .ring-2 { --boot-band: var(--motif-2, 1); opacity: var(--boot-band); transform: scale(calc(.92 + .08 * var(--boot-band))); }
+.intro .ring-3 { --boot-band: var(--motif-3, 1); opacity: var(--boot-band); transform: scale(calc(.92 + .08 * var(--boot-band))); }
+.intro .ring-4 { --boot-band: var(--motif-4, 1); opacity: var(--boot-band); transform: scale(calc(.92 + .08 * var(--boot-band))); }
+/* The existing nonblocking M01 progress traces the hollow outline. It is
+   separate from the owned stage ink, and interruption finishes it at once. */
+.intro .track path { stroke-dasharray: 1 1; stroke-dashoffset: calc(1 - var(--boot-band, 1)); }
+.welcome-ghost > .intro { min-height: 0; height: 100%; padding: 0; }
+@media (max-height: 480px) { .intro { min-height: 160px; padding: 16px 0; } .intro-emblem .emblem { width: 128px; height: 128px; } }
+
+/*
+ * Conversation decoration (M01/M03/M04). Controllers write only custom properties
+ * (--intro-card, --motif-0..4 for the five emblem bands, --p, --dot-0..2) and only while
+ * something is animating; at rest nothing is written and everything is final. Final layout is
+ * always reserved: only opacity and transform change.
+ */
+.intro {
+  opacity: var(--intro-card, 1);
+  transform: translateY(calc((1 - var(--intro-card, 1)) * 8px));
+}
+
+/* Generic enter/exit progress (user bubble, complete result, suggestions, pending row and label layers). */
+[data-playing] {
+  opacity: var(--p, 1);
+  transform: translateY(calc((1 - var(--p, 1)) * var(--fade-y, 0px)));
+}
+
+[data-exiting] {
+  pointer-events: none;
+}
+
+/* The outgoing welcome: a still, noninteractive copy at its previous rectangle. It takes no part in layout. */
+.welcome-ghost {
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* The owned source stays editable context: one small explicit action under the source bubble. */
+.source-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: -12px;
+}
+
+.assistant.pending {
+  /* A departing status row is not the reader's answer. */
+  overflow-anchor: none;
+  align-self: flex-start;
+  max-width: 84%;
+  padding: 10px 14px;
+  border-radius: 20px 20px 20px 6px;
+  background: var(--ink);
+  color: var(--on-ink);
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+
+.dots {
+  display: inline-flex;
+  flex: none;
+  gap: 3px;
+}
+
+.dot {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.dot:nth-child(1) { opacity: var(--dot-0, 1); }
+.dot:nth-child(2) { opacity: var(--dot-1, 1); }
+.dot:nth-child(3) { opacity: var(--dot-2, 1); }
+
+/* One stable row: stage labels stack in the same cell, so a crossfade never moves anything. */
+.stage {
+  display: grid;
+  min-width: 0;
+}
+
+.stage-layer {
+  grid-area: 1 / 1;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.intro-title {
+  margin-bottom: 4px;
+  font: 600 19px/24px var(--sans);
+}
+
+.support {
+  color: var(--muted);
+  font: 400 13px/18px var(--sans);
+}
+
+.emphasis {
+  font-weight: 600;
+}
+
+.user-bubble {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-self: flex-end;
+  max-width: 84%;
+  min-width: 0;
+  padding: 10px 14px;
+  border-radius: 20px 20px 6px 20px;
+  background: var(--ink);
+  color: var(--on-ink);
+  overflow-wrap: anywhere;
+}
+
+/* Supporting lines inside a black box stay white, never the grey used on the canvas. */
+.user-bubble .support {
+  color: var(--on-ink);
+}
+
+.bubble-url {
+  overflow-wrap: anywhere;
+}
+
+.assistant {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-width: 0;
+}
+
+.assistant p,
+.assistant li {
+  overflow-wrap: anywhere;
+}
+
+/* Completed agent messages use the same black/white language as the working bubble. */
+.message-bubble {
+  align-self: flex-start;
+  max-width: 84%;
+  padding: 18px 20px;
+  border-radius: 24px 24px 24px 6px;
+  background: var(--ink);
+  color: var(--on-ink);
+}
+.message-bubble .support,
+.message-bubble .synthetic-label { color: var(--on-ink); }
+.message-bubble :focus-visible { outline-color: var(--on-ink); }
+
+/* Retained one-line context above the results (the choice that led to them). */
+.assistant.context {
+  gap: 4px;
+}
+
+.status {
+  color: var(--muted);
+}
+
+.notice {
+  color: var(--ink);
+  padding: 0;
+}
+
+.synthetic-label {
+  align-self: flex-start;
+  padding: 0;
+  color: var(--muted);
+  font: 400 12px/18px var(--sans);
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.chip,
+.suggestion {
+  min-height: 44px;
+  padding: 10px 16px;
+  border: 1px solid var(--boundary);
+  border-radius: 20px;
+  background: var(--surface);
+  color: var(--ink);
+  font: 500 14px/20px var(--sans);
+  cursor: pointer;
+}
+
+/* Selected: a black fill with white text (and the check mark), readable without any hue. */
+.chip[aria-pressed='true'],
+.identity-row[aria-pressed='true'] {
+  border-color: var(--ink);
+  background: var(--ink);
+  color: var(--on-ink);
+}
+
+.identity-row[aria-pressed='true'] .support {
+  color: var(--on-ink);
+}
+
+/*
+ * Selected mark (M07.selection): always present in a reserved end slot, so selecting
+ * never changes width or wrapping. Only its opacity crossfades (--t, written while it
+ * animates); at rest the semantic state (data-on) decides. Nothing reorders.
+ */
+.chip {
+  display: inline-flex;
+  min-width: 0;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  align-items: center;
+  gap: 8px;
+}
+
+.select-mark {
+  display: inline-grid;
+  flex: none;
+  place-items: center;
+  width: 14px;
+  height: 14px;
+  opacity: var(--t, 0);
+}
+
+.select-mark[data-on] {
+  opacity: var(--t, 1);
+}
+
+/* Press (M03.control): only while a pointer holds the control; reduced motion never sets it. */
+[data-pressing] {
+  transform: scale(var(--press, 1));
+}
+
+.identity-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.identity-text {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.identity-context {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  max-width: 100%;
+  font-size: 14px;
+  line-height: 20px;
+  text-decoration: underline;
+  overflow-wrap: anywhere;
+}
+
+.identity-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 56px;
+  padding: 10px 16px;
+  border: 1px solid var(--boundary);
+  border-radius: 20px;
+  background: var(--surface);
+  color: var(--ink);
+  text-align: left;
+  cursor: pointer;
+}
+
+.identity-option > .identity-row {
+  width: 100%;
+}
+
+.identity-row:hover:not([aria-pressed='true']) {
+  background: var(--subtle);
+}
+
+.why summary {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  padding: 4px 0;
+  cursor: pointer;
+  color: var(--muted);
+  font: 500 14px/20px var(--sans);
+  overflow-wrap: anywhere;
+}
+
+.why[open] > summary {
+  color: var(--ink);
+}
+
+.why > summary ~ * {
+  margin-top: 8px;
+}
+
+.why > summary ~ *:last-child {
+  margin-bottom: 8px;
+}
+
+.why ul {
+  margin: 0;
+  padding-left: 20px;
+  color: var(--muted);
+  font: 400 13px/18px var(--sans);
+}
+
+.primary:disabled,
+.secondary:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.chip:disabled {
+  color: var(--muted);
+  border-style: dashed;
+  border-color: var(--muted);
+  cursor: not-allowed;
+}
+
+/* A save awaiting its acknowledgement: held, not unavailable. The control keeps focus; a click does nothing. */
+.chip[aria-disabled='true'],
+.primary[aria-disabled='true'],
+.secondary[aria-disabled='true'],
+.identity-row[aria-disabled='true'] {
+  opacity: 0.7;
+  cursor: progress;
+}
+
+/* The approved public example: one compact line and one explicit action (a draft fill only). */
+.example-offer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px 12px;
+}
+
+.example-offer > .support {
+  flex: 1 1 200px;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.attribution {
+  overflow-wrap: anywhere;
+}
+
+.attribution a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+.suggestion:hover {
+  background: var(--subtle);
+}
+
+.composer-context {
+  /* The example and editable focus remain reachable in the document,
+     even when their combined height is larger than the visible viewport. */
+  overflow-anchor: none;
+  display: flex;
+  flex: none;
+  flex-direction: column;
+  gap: 8px;
+  padding: 12px 0 8px;
+  background: linear-gradient(to bottom, transparent, var(--canvas) 24px);
+}
+
+.composer-context:empty { display: none; }
+
+.composer-wrap {
+  /* Native anchoring here would drag the viewport past a newly appended answer. */
+  overflow-anchor: none;
+  position: sticky;
+  /* The same single offset as the .app padding: the composer sits on the visible viewport bottom, never translated twice. */
+  bottom: var(--kb-inset, 0px);
+  display: flex;
+  flex: none;
+  flex-direction: column;
+  gap: 8px;
+  padding: 12px 0 max(12px, env(safe-area-inset-bottom));
+  background: linear-gradient(to bottom, transparent, var(--canvas) 24px);
+}
+
+/* Preserve the original total spacing and surface when context precedes the
+   editor: the 12px lead-in and the final 8px gap now belong to that flow block. */
+.composer-context:not(:empty) + .composer-wrap {
+  padding-top: 0;
+  background: var(--canvas);
+}
+
+/* If the measured dock plus a full context control cannot fit, keep both in
+   the same document flow. Nothing is hidden, clamped or put in a second port. */
+.composer-wrap[data-flow] {
+  position: relative;
+  bottom: auto;
+}
+
+/* With the keyboard open the home-indicator inset is covered. */
+:root[data-keyboard] .composer-wrap {
+  padding-bottom: 12px;
+}
+
+.new-answer-row {
+  display: flex;
+  justify-content: center;
+}
+
+.new-answer {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 10px 20px;
+  border: 1px solid var(--boundary);
+  border-radius: 22px;
+  background: var(--surface);
+  font: 500 14px/20px var(--sans);
+  cursor: pointer;
+}
+
+.new-answer:hover {
+  background: var(--subtle);
+}
+
+.suggestion {
+  max-width: 100%;
+  background: var(--ink);
+  color: var(--canvas);
+  border-color: var(--ink);
+  border-radius: 22px;
+  padding: 10px 18px;
+  font-weight: 400;
+  text-align: left;
+}
+.suggestion:hover { background: #191919; border-color: #191919; }
+.example-entry { text-align: center; }
+.example-entry > summary { display: inline-flex; align-items: center; min-height: 44px; color: var(--muted); font: 400 13px/20px var(--sans); cursor: pointer; list-style: none; text-underline-offset: 4px; }
+.example-entry > summary:hover { text-decoration: underline; }
+.example-entry > summary::-webkit-details-marker { display: none; }
+.example-entry[open] > .example-offer { margin-top: 8px; text-align: left; }
+
+.draft-details {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 12px 16px;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: var(--surface);
+}
+
+.draft-details.compact {
+  display: block;
+  padding: 0 16px;
+}
+
+.draft-details.compact > summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 44px;
+  color: var(--muted);
+  font: 500 14px/20px var(--sans);
+  cursor: pointer;
+  list-style: none;
+}
+
+.draft-details.compact > summary::-webkit-details-marker {
+  display: none;
+}
+
+.summary-text {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.summary-action {
+  flex: none;
+  color: var(--ink);
+}
+
+.draft-details.compact[open] > summary {
+  border-bottom: 1px solid var(--line);
+}
+
+.draft-details-body {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  /* Never take over a short screen; long content scrolls inside. */
+  max-height: min(40dvh, 320px);
+  padding: 12px 2px;
+  overflow-y: auto;
+}
+
+/* Fields share a row when there is room and wrap rather than clip at 320/393 px. */
+.focus-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.focus-row > .field {
+  flex: 1 1 112px;
+}
+
+.field {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.field-label {
+  font: 500 14px/20px var(--sans);
+  overflow-wrap: anywhere;
+}
+
+.field input {
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
+  min-height: 44px;
+  padding: 10px 12px;
+  border: 1px solid var(--boundary);
+  border-radius: 12px;
+  background: var(--canvas);
+  font-size: 16px;
+}
+
+/* Recordings are unboxed assistant content, separated by a decorative line. */
+.recording-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  min-width: 0;
+}
+
+.choice {
+  display: grid;
+  grid-template-areas: 'heading' 'fit' 'listen' 'feedback' 'details';
+  gap: 16px;
+  padding: 24px 0;
+  border: 0;
+  border-top: 1px solid var(--line);
+  border-radius: 0;
+  min-width: 0;
+}
+
+.choice:last-child { border-bottom: 1px solid var(--line); }
+.choice-heading { grid-area: heading; display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+.choice-title {
+  margin: 0;
+  font: 700 24px/30px var(--sans);
+  letter-spacing: -.02em;
+  overflow-wrap: anywhere;
+}
+.choice-credits { font: 400 14px/20px var(--sans); }
+.choice-fit { grid-area: fit; max-width: 68ch; }
+.choice-fit .support { font-size: 12px; line-height: 18px; }
+.choice-listen { grid-area: listen; margin: 0; align-self: start; }
+.choice-listen .play { justify-content: center; gap: 12px; min-height: 44px; padding: 12px 16px; border-radius: 12px; }
+.destination-arrow { flex: none; transition: transform 160ms cubic-bezier(.2, 0, 0, 1); }
+
+.play {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.sources {
+  margin: 0;
+  padding-left: 20px;
+  color: var(--muted);
+  font: 400 13px/18px var(--sans);
+  overflow-wrap: anywhere;
+}
+
+.sources a {
+  color: var(--ink);
+}
+
+/* Free, independent fit and familiarity toggles; wrap rather than clip on narrow panes. */
+.feedback {
+  grid-area: feedback;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  align-items: start;
+  gap: 16px;
+  min-width: 0;
+}
+.feedback-question { min-width: 0; margin: 0; padding: 0; border: 0; }
+.feedback-question legend { margin: 0 0 8px; padding: 0; color: var(--muted); font: 500 12px/18px var(--sans); }
+.feedback-question .chips { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 4px; padding: 4px; border: 1px solid var(--line); border-radius: 14px; }
+.feedback-question .chip { justify-content: center; min-height: 44px; padding: 8px; gap: 6px; border: 0; border-radius: 10px; font-size: 13px; }
+.feedback > .secondary { justify-self: start; min-height: 44px; padding: 0; border: 0; border-radius: 0; text-decoration: underline; text-underline-offset: 4px; }
+.feedback .select-mark { --mark-state: 0; }
+.feedback .select-mark[data-on] { --mark-state: 1; }
+.feedback .select-mark path { stroke-dasharray: 1 1; stroke-dashoffset: calc(1 - var(--t, var(--mark-state))); }
+
+.choice-details { grid-area: details; min-width: 0; align-self: start; }
+.choice-details > summary { display: inline-flex; align-items: center; gap: 12px; min-height: 44px; padding: 0; color: var(--muted); font: 500 13px/20px var(--sans); cursor: pointer; list-style: none; }
+.choice-details > summary::-webkit-details-marker { display: none; }
+.detail-chevron { width: 6px; height: 6px; border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; transform: rotate(45deg); transition: transform 160ms cubic-bezier(.2, 0, 0, 1); }
+.choice-details[open] .detail-chevron { transform: rotate(225deg); }
+.choice-details-body { display: flex; flex-direction: column; gap: 8px; padding-top: 8px; }
+
+/* Only the current M04 entrance paints this cascade. Restored/history panels
+   mount at rest. No child translation changes focus or reading measurements. */
+.appear[data-playing] .recording-list > .choice:nth-child(2) { opacity: calc(.55 + .45 * var(--p, 1)); }
+.appear[data-playing] .recording-list > .choice:nth-child(3) { opacity: calc(.25 + .75 * var(--p, 1)); }
+.appear[data-playing] .recording-list > .choice:focus-within { opacity: 1; }
+
+@media (min-width: 720px) {
+  .choice > .feedback { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .feedback > .secondary, .feedback > [role='status'] { grid-column: 1 / -1; }
+}
+@media (min-width: 1000px) {
+  .choice { grid-template-columns: minmax(0, 1fr) 240px; grid-template-areas: 'heading listen' 'fit fit' 'feedback details'; column-gap: 32px; }
+  .choice-listen .play { width: 100%; }
+  .choice-details { align-self: end; }
+}
+@media (hover: hover) and (pointer: fine) {
+  .choice-listen a:hover .destination-arrow { transform: translate(2px, -2px); }
+  .choice-details > summary:hover { color: var(--ink); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .destination-arrow, .detail-chevron { transition: none; }
+  .choice-listen a:hover .destination-arrow { transform: none; }
+}
+
+.basis {
+  margin: 0;
+  padding-left: 20px;
+  font: 400 13px/18px var(--sans);
+  overflow-wrap: anywhere;
+}
+
+.leave-out {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.check {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  font: 400 14px/20px var(--sans);
+  overflow-wrap: anywhere;
+}
+
+.check input {
+  width: 20px;
+  height: 20px;
+  accent-color: var(--ink);
+}
+
+.answer-text {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  color: var(--muted);
+  font: 400 13px/18px var(--sans);
+}
+
+.suggestions-frame {
+  width: 100%;
+  min-height: 64px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--surface);
+}
+
+/* Errors are monochrome: ink text, a leading "!" and a heavier weight, never hue alone. */
+.field-error {
+  color: var(--ink);
+  font: 500 13px/18px var(--sans);
+}
+
+.field-error::before {
+  content: '! ';
+  font-weight: 700;
+}
+
+.composer-row {
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+  min-width: 0;
+}
+
+/* a black input, white type and unboxed white controls. */
+.composer {
+  display: flex;
+  flex: 1;
+  min-width: 0;
+  align-items: flex-end;
+  gap: 4px;
+  min-height: 64px;
+  padding: 8px 8px 8px 22px;
+  border: 1px solid var(--boundary);
+  border-radius: 28px;
+  background: var(--ink);
+  color: var(--on-ink);
+}
+
+.composer textarea {
+  flex: 1;
+  min-width: 0;
+  min-height: 24px;
+  /* Editable box: at most six rendered 24 px lines and never above 144 px; scrolls inside beyond that. */
+  max-height: 144px;
+  max-height: min(144px, 6lh);
+  /* The text box keeps its measured line geometry; the outer composer supplies the hit-target padding. */
+  margin: 10px 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  overflow-y: auto;
+  resize: none;
+  font-size: 16px;
+  line-height: 24px;
+  overflow-wrap: anywhere;
+}
+
+.composer textarea:focus-visible {
+  outline: none;
+}
+
+.composer textarea::placeholder {
+  color: var(--on-ink);
+  opacity: .72;
+}
+
+.composer textarea:disabled {
+  color: var(--on-ink);
+}
+
+.composer:focus-within {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+
+.composer textarea[aria-invalid='true'] {
+  text-decoration: underline wavy var(--on-ink);
+}
+
+/* The one microphone: white strokes, no backdrop. It only opens the chooser. */
+.mic {
+  display: inline-grid;
+  flex: none;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 0;
+  border-radius: 22px;
+  background: transparent;
+  color: var(--on-ink);
+  cursor: pointer;
+}
+
+.mic:hover {
+  opacity: .72;
+}
+
+/* Send has no circular surface. Its stable hit target becomes Stop during work. */
+.send {
+  display: inline-grid;
+  flex: none;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 0;
+  border-radius: 10px;
+  background: transparent;
+  color: var(--on-ink);
+  cursor: pointer;
+}
+
+.send:not(:disabled):not([aria-disabled='true']):hover {
+  opacity: .72;
+}
+
+/*
+ * the plain white arrow stays white when unavailable. The
+ * unavailable state is carried by aria-disabled (no activation), the not-allowed cursor and the visible reason text, never by grey.
+ */
+.send:disabled,
+.send[aria-disabled='true'] {
+  background: transparent;
+  color: var(--on-ink);
+  cursor: not-allowed;
+}
+.composer button:focus-visible { outline: 2px solid var(--on-ink); outline-offset: 2px; }
+
+/*
+ * One stable action button: the Send and Stop glyphs share one cell and crossfade
+ * (--t, written while it animates; at rest data-working decides), so the button, its
+ * width, its focus and its 44 px hit area never change.
+ */
+.send > svg {
+  grid-area: 1 / 1;
+}
+
+.send .icon-send {
+  opacity: calc(1 - var(--t, 0));
+}
+
+.send .icon-stop {
+  opacity: var(--t, 0);
+}
+
+.send[data-working] .icon-send {
+  opacity: calc(1 - var(--t, 1));
+}
+
+.send[data-working] .icon-stop {
+  opacity: var(--t, 1);
+}
+
+.privacy-note {
+  margin: 0;
+  text-align: center;
+  font-size: 12px;
+  line-height: 17px;
+}
+
+/*
+ * Session drawer. Motion is driven by two variables the presence controller
+ * writes on the layer (--drawer-p and --scrim-p, 0..1), never by CSS animation:
+ * the drawer slides from -100% of its own width minus the gutter, the scrim
+ * reaches 0.46 black. An exiting drawer ignores the pointer so it can never
+ * block the page.
+ */
+.drawer-layer {
+  --drawer-gutter: 4px;
+  --drawer-left: calc(var(--drawer-gutter) + env(safe-area-inset-left));
+  position: fixed;
+  /* The same single visible-viewport inset as the Why sheet; never put Clear/Close behind an overlay keyboard. */
+  inset: 0 0 var(--kb-inset, 0px) 0;
+  z-index: 10;
+}
+
+.drawer-layer[data-exiting] {
+  pointer-events: none;
+}
+
+.drawer-scrim {
+  position: absolute;
+  inset: 0;
+  background: #000;
+  opacity: calc(var(--scrim-p, 0) * 0.46);
+  touch-action: none;
+}
+
+.drawer {
+  position: absolute;
+  top: calc(var(--drawer-gutter) + env(safe-area-inset-top));
+  bottom: calc(var(--drawer-gutter) + env(safe-area-inset-bottom));
+  left: var(--drawer-left);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: min(82vw, 320px);
+  max-width: calc(100vw - var(--drawer-left) - var(--drawer-gutter));
+  padding: 24px 16px;
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  background: var(--surface);
+  overflow-x: hidden;
+  overflow-y: hidden;
+  overscroll-behavior: contain;
+  transform: translateX(calc((1 - var(--drawer-p, 0)) * (-100% - var(--drawer-left))));
+}
+
+.drawer:focus {
+  outline: none;
+}
+.drawer-heading { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex: none; }
+.drawer-content { display: flex; flex-direction: column; gap: 16px; min-height: 0; flex: 1; overflow-y: auto; overscroll-behavior: contain; }
+.drawer-footer { flex: none; padding-top: 16px; border-top: 1px solid var(--line); }
+.drawer-footer .primary { flex: 1; }
+.privacy-toggle { display: flex; align-items: center; justify-content: space-between; gap: 12px; width: 100%; min-height: 44px; margin-top: auto; padding: 10px; border: 0; border-radius: 10px; background: transparent; color: var(--muted); text-align: left; font: 400 13px/20px var(--sans); cursor: pointer; }
+.privacy-toggle:hover { background: var(--subtle); }
+.privacy-content { display: flex; flex-direction: column; gap: 16px; padding: 0 10px 12px; font-size: 14px; line-height: 21px; }
+
+.drawer p,
+.drawer a {
+  overflow-wrap: anywhere;
+}
+
+.sheet-title {
+  font: 700 21px/27px var(--sans);
+}
+
+/*
+ * Contextual sheet (M06.sheet), bottom-origin. The presence controller writes
+ * --sheet-p (0 off-screen .. 1 open, including drag position) and --scrim-p on
+ * the layer; there is no CSS animation. The layer's bottom edge is the single
+ * keyboard offset (--kb-inset, see viewport.ts), so its height IS the visible
+ * viewport: the sheet's max-height is that height minus the top gap, with no
+ * second keyboard translation. An exiting sheet ignores the pointer.
+ */
+.sheet-layer {
+  --sheet-gap: 8px;
+  --sheet-top: max(env(safe-area-inset-top), 16px);
+  position: fixed;
+  inset: 0 0 var(--kb-inset, 0px) 0;
+  z-index: 20;
+}
+
+.sheet-layer[data-exiting] {
+  pointer-events: none;
+}
+
+.sheet-scrim {
+  position: fixed;
+  inset: 0;
+  background: #000;
+  opacity: calc(var(--scrim-p, 0) * 0.46);
+  touch-action: none;
+}
+
+.sheet {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: var(--sheet-gap);
+  display: flex;
+  flex-direction: column;
+  width: min(640px, calc(100% - 16px));
+  max-height: calc(100% - var(--sheet-top) - var(--sheet-gap));
+  margin-inline: auto;
+  border: 1px solid var(--boundary);
+  border-radius: 36px 36px 28px 28px;
+  background: var(--surface);
+  overflow: hidden;
+  transform: translateY(calc((1 - var(--sheet-p, 0)) * (100% + var(--sheet-gap))));
+}
+
+.sheet:focus {
+  outline: none;
+}
+
+/* The handle is the only drag surface: a 44 px target, no browser panning or scrolling from it. */
+.sheet-handle {
+  flex: none;
+  display: grid;
+  place-items: center;
+  min-height: 44px;
+  cursor: grab;
+  touch-action: none;
+}
+
+.sheet-grip {
+  width: 36px;
+  height: 4px;
+  border-radius: 2px;
+  background: var(--boundary);
+}
+
+/* Persistent header: the title and Close never scroll away. */
+.sheet-head {
+  flex: none;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 16px 8px;
+}
+
+.sheet-head .sheet-title {
+  flex: 1;
+  min-width: 0;
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+.sheet-close {
+  flex: none;
+}
+
+/* Only this region scrolls (inside the sheet, never the page behind it). It is a keyboard-focusable scroller on purpose. */
+.sheet-body {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  gap: 12px;
+  min-height: 0;
+  padding: 4px 16px 8px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+.sheet-body:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: -2px;
+}
+
+/* Persistent footer (Stop / Clear while work is pending). */
+.sheet-foot {
+  flex: none;
+  padding: 8px 16px 0;
+  border-top: 1px solid var(--line);
+}
+
+.sheet {
+  padding-bottom: max(16px, env(safe-area-inset-bottom));
+}
+
+.sheet-body p,
+.sheet-body li {
+  overflow-wrap: anywhere;
+}
+
+.sheet-title:focus {
+  outline: none;
+}
+
+.why-lines,
+.why-section ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.why-lines {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.why-section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.why-heading {
+  margin: 0;
+  font: 600 14px/20px var(--sans);
+}
+
+.action-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.action-row > button {
+  min-width: 0;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+
+.primary,
+.secondary {
+  min-height: 44px;
+  padding: 10px 20px;
+  border-radius: 22px;
+  font: 500 14px/20px var(--sans);
+  cursor: pointer;
+}
+
+.primary {
+  border: 0;
+  background: var(--ink);
+  color: var(--on-ink);
+}
+
+.secondary {
+  border: 1px solid var(--boundary);
+  background: transparent;
+  color: var(--ink);
+}
+
+.primary:hover {
+  background: #262626;
+}
+
+.secondary:hover {
+  background: var(--subtle);
+}
+
+.message-bubble .why > summary,
+.message-bubble .why[open] > summary,
+.message-bubble .why ul { color: var(--on-ink); }
+.message-bubble .secondary { color: var(--on-ink); border-color: var(--on-ink); }
+.message-bubble .secondary:hover { background: #262626; color: var(--on-ink); }
+
+/* Voice-input chooser and local music capture inside the retained contextual sheet. */
+.recording-controls { display: flex; flex-direction: column; gap: 16px; padding-top: 16px; }
+.recording-controls p { margin: 0; }
+.recording-time { font: 500 48px/56px var(--sans); letter-spacing: -.04em; font-variant-numeric: tabular-nums; }
+.recording-controls .action-row { padding-top: 8px; }
+.voice-routes {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.voice-route {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  min-height: 64px;
+  padding: 10px 16px;
+  border: 1px solid var(--boundary);
+  border-radius: 20px;
+  background: var(--surface);
+  color: var(--ink);
+  text-align: left;
+  cursor: pointer;
+}
+
+.voice-route:hover {
+  background: var(--subtle);
+}
+.voice-route:not([aria-disabled]) { background: var(--ink); color: var(--on-ink); }
+.voice-route:not([aria-disabled]) .support { color: var(--on-ink); opacity: .72; }
+
+/* The explicit unavailable label and semantic state remain, without placeholder styling. */
+.voice-route[aria-disabled='true'] {
+  border-color: var(--line);
+  cursor: not-allowed;
+}
+
+.voice-icon {
+  flex: none;
+}
+
+.voice-text {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.voice-label {
+  font: 500 16px/24px var(--sans);
+}
+
+/* Always present (empty until a route is chosen) so the live region announces its text when it is filled. */
+.voice-explanation {
+  margin: 0;
+  overflow-wrap: anywhere;
+}

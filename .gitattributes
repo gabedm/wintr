@@ -1,0 +1,8 @@
+* text=auto eol=lf
+
+# Preserve the approved source packet's exact bytes and published receipt hashes.
+docs/design/reference/* -text
+# Packaged font licence notices are shipped byte-for-byte (hashes pinned in fonts.json).
+src/client/public/licenses/*.txt -text
+scripts/upstream-notices/*.txt -text
+src/client/public/licenses/Software-NOTICES.txt -text -whitespace

@@ -1,0 +1,14 @@
+{
+  "source": "GeoNames cities15000: cities over15000people or capitals; not exhaustive",
+  "licence": "CC BY4.0",
+  "date": "2026-10-31",
+  "changes": "Keep public ID/name/ASCII/country/admin1/population only; omit names over100characters; sort by population; GB label UK",
+  "records": 34193,
+  "countries": 252,
+  "sources": {
+    "cities15000.zip": "449edf72e23bbb81532f5617bca2ba2e37357304ab6db34733a19a325add3f7d",
+    "admin1CodesASCII.txt": "2e4867f5397acb056ea26377601b57af37cb4c81399770225018e9e439e91ad3",
+    "countryInfo.txt": "5c710efde90ee4cca15001c9f6a97ae7a74c7020b365504913ddc3afeb6d3671"
+  },
+  "outputSha256": "78f13feef2e65fa02fc73fc55f3bef979fed033e805e92111834e0fda27d37fe"
+}

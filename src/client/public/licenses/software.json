@@ -1,0 +1,2177 @@
+{
+  "about": "Installed production dependency closure from the frozen pnpm lockfile. Original-code MIT does not replace these licences. No private machine paths or credentials.",
+  "original_notice_unresolved": [],
+  "missing_optional_dependencies": [
+    "bufferutil",
+    "utf-8-validate"
+  ],
+  "packages": [
+    {
+      "id": "@fontsource/inter@5.3.0",
+      "name": "@fontsource/inter",
+      "version": "5.3.0",
+      "distribution": [
+        "font_assets"
+      ],
+      "declared_license": "OFL-1.1",
+      "integrity": "sha512-RofMylZmjlJEfELXeNHFWBRcSs75rGU/6bV2S2jfnvv/3rPXPGe0LgUJTklcHZ9lM4OZmAVFhcJPnACfb91A3g==",
+      "notice_status": "packaged_original_notices",
+      "notices": [
+        {
+          "path": "LICENSE",
+          "sha256": "3b0a5fca3d17942cde889069889dedbbbd075e9b599968c82a95f4d944e9b345"
+        }
+      ]
+    },
+    {
+      "id": "@fontsource/space-grotesk@5.3.0",
+      "name": "@fontsource/space-grotesk",
+      "version": "5.3.0",
+      "distribution": [
+        "font_assets"
+      ],
+      "declared_license": "OFL-1.1",
+      "integrity": "sha512-ksnGizDPXIDuvqcTYTSrmZ+evx9sDlS8rp7+42BQ7wU+spt3twEoXfbJz672C+5CLg6VeUQwRy5RXshWb67LcQ==",
+      "notice_status": "packaged_original_notices",
+      "notices": [
+        {
+          "path": "LICENSE",
+          "sha256": "18a4de52385f6b988782639d5d0cc1326e5a8c2de9a7f01d7b20d9aedcc60943"
+        }
+      ]
+    },
+    {
+      "id": "@google-cloud/firestore-api@0.2.0",
+      "name": "@google-cloud/firestore-api",
+      "version": "0.2.0",
+      "distribution": [
+        "external_server"
+      ],
+      "declared_license": "Apache-2.0",
+      "integrity": "sha512-wfHJPZmLqzpy6FN6U+7HkkP/AKhGsbHSpEy/qL2TyI3/pKRAvpamQxZ2qvps5hMRgAjfuHCim+oeJj9RveCaqg==",
+      "notice_status": "upstream_verified_notice",
+      "notices": [
+        {
+          "path": "upstream/google-cloud-node-Apache-2.0.txt",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+        }
+      ],
+      "publication_provenance": {
+        "license": "Apache-2.0",
+        "status": "upstream_verified_notice",
+        "registry": "https://registry.npmjs.org/@google-cloud%2Ffirestore-api/0.2.0",
+        "gitHead": "ecfaf4ccee609ccb44e8cfc28fbab2fdf20fa8d8",
+        "manifest": "https://raw.githubusercontent.com/googleapis/google-cloud-node/ecfaf4ccee609ccb44e8cfc28fbab2fdf20fa8d8/packages/google-cloud-firestore-api/package.json",
+        "notice": "google-cloud-node-Apache-2.0.txt",
+        "noticeUrl": "https://raw.githubusercontent.com/googleapis/google-cloud-node/ecfaf4ccee609ccb44e8cfc28fbab2fdf20fa8d8/LICENSE",
+        "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+      }
+    },
+    {
+      "id": "@google-cloud/firestore@9.3.1",
+      "name": "@google-cloud/firestore",
+      "version": "9.3.1",
+      "distribution": [
+        "external_server"
+      ],
+      "declared_license": "Apache-2.0",
+      "integrity": "sha512-ofGTiSpfXrHrrS3KaDOmsupSzCHr4WVl1+s6Ke0F8rPBRyb/OuZSC8u1NjCKtt/fO7A1GvqASQGhdAwVsnGpQA==",
+      "notice_status": "packaged_original_notices",
+      "notices": [
+        {
+          "path": "LICENSE",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+        }
+      ]
+    },
+    {
+      "id": "@grpc/grpc-js@1.14.6",
+      "name": "@grpc/grpc-js",
+      "version": "1.14.6",
+      "distribution": [
+        "external_server"
+      ],
+      "declared_license": "Apache-2.0",
+      "integrity": "sha512-SgC/B3/VZ8lTyOZ4Cwk6f1skWhmkNAaVfiX90qd5u1rRXGKk1//8FTUEN9GvOUq7rfWIqAYkA3CoyumYVpOS6g==",
+      "notice_status": "packaged_original_notices",
+      "notices": [
+        {
+          "path": "LICENSE",
+          "sha256": "e03ba41d7fab20700769fe4118bab50d800cb74f990353a05d2f5fff1c228363"
+        },
+        {
+          "path": "proto/protoc-gen-validate/LICENSE",
+          "sha256": "3ddf9be5c28fe27dad143a5dc76eea25222ad1dd68934a047064e56ed2fa40c5"
+        },
+        {
+          "path": "proto/xds/LICENSE",
+          "sha256": "1eb85fc97224598dad1852b5d6483bbcf0aa8608790dcc657a5a2a761ae9c8c6"
+        }
+      ]
+    },
+    {
+      "id": "@grpc/proto-loader@0.8.1",
+      "name": "@grpc/proto-loader",
+      "version": "0.8.1",
+      "distribution": [
+        "external_server"
+      ],
+      "declared_license": "Apache-2.0",
+      "integrity": "sha512-wtF6h+DY6M3YaDBPAmvuuA6jV8Sif9MjtOI5euKFWRgCDl5PeDpPsHR9u2l6St5ceY8AZgoNDww5+HvEsXFsGg==",
+      "notice_status": "packaged_original_notices",
+      "notices": [
+        {
+          "path": "LICENSE",
+          "sha256": "b40930bbcf80744c86c46a12bc9da056641d722716c378f5659b9e555ef833e1"
+        }
+      ]
+    },
+    {
+      "id": "@isaacs/cliui@8.0.2",
+      "name": "@isaacs/cliui",
+      "version": "8.0.2",
+      "distribution": [
+        "external_server"
+      ],
+      "declared_license": "ISC",
+      "integrity": "sha512-O8jcjabXaleOG9DQ0+ARXWZBTfnP4WNAqzuiJK7ll44AmxGKv/J2M4TPjxjY3znBCfvBXFzucm1twdyFybFqEA==",
+      "notice_status": "packaged_original_notices",
+      "notices": [
+        {
+          "path": "LICENSE.txt",
+          "sha256": "2dc0465729366c3a7890dfa9e972a1ba7048a26c02116fb8b419a6a1ac110149"
+        }
+      ]
+    },
+    {
+      "id": "@js-sdsl/ordered-map@4.4.2",
+      "name": "@js-sdsl/ordered-map",
+      "version": "4.4.2",
+      "distribution": [
+        "external_server"
+      ],
+      "declared_license": "MIT",
+      "integrity": "sha512-iUKgm52T8HOE/makSxjqoWhe95ZJA1/G1sYsGev2JDKUSS14KAgg1LHb+Ba+IPow0xflbnSkOsZcO08C7w1gYw==",
+      "notice_status": "packaged_original_notices",
+      "notices": [
+        {
+          "path": "LICENSE",
+          "sha256": "787684b2059945f845f404340e20c4c8e3f325f4ab7aaeaf8e985f38c8d84658"
+        }
+      ]
+    },
+    {
+      "id": "@opentelemetry/api@1.10.0",
+      "name": "@opentelemetry/api",
+      "version": "1.10.0",
+      "distribution": [
+        "external_server"
+      ],
+      "declared_license": "Apache-2.0",
+      "integrity": "sha512-lMkyes8iHrG+mk6WH7X70MdCLI2RS0FwNBY1PyQ8UemaijE2m5mv5A0Niy3HtbYTFrgkUEQjFMXmSAk2hQDuPQ==",
+      "notice_status": "packaged_original_notices",
+      "notices": [
+        {
+          "path": "LICENSE",
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+        }
+      ]
+    },
+    {
+      "id": "@pkgjs/parseargs@0.11.0",
+      "name": "@pkgjs/parseargs",
+      "version": "0.11.0",
+      "distribution": [
+        "external_server"
+      ],
+      "declared_license": "MIT",
+      "integrity": "sha512-+1VkjdD0QBLPodGrJUeqarH8VAIvQODIbwh9XpP5Syisf7YoQgsJKPNFoqqLQlu+VQ/tVSshMR6loPMn8U+dPg==",
+      "notice_status": "packaged_original_notices",
+      "notices": [
+        {
+          "path": "LICENSE",
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+        }
+      ]
+    },
+    {
+      "id": "@protobufjs/aspromise@1.1.2",
+      "name": "@protobufjs/aspromise",
+      "version": "1.1.2",
+      "distribution": [
+        "external_server"
+      ],
+      "declared_license": "BSD-3-Clause",
+      "integrity": "sha512-j+gKExEuLmKwvz3OgROXtrJ2UG2x8Ch2YZUxahh+s1F2HZ+wAceUNLkvy6zKCPVRkU++ZWQrdxsUeQXmcg4uoQ==",
+      "notice_status": "packaged_original_notices",
+      "notices": [
+        {
+          "path": "LICENSE",
+          "sha256": "a67b34a24a5daddcce46aea68c5004e4442bbfb63690329fa607bf4de4269794"
+        }
+      ]
+    },
+    {
+      "id": "@protobufjs/base64@1.1.2",
+      "name": "@protobufjs/base64",
+      "version": "1.1.2",
+      "distribution": [
+        "external_server"
+      ],
+      "declared_license": "BSD-3-Clause",
+      "integrity": "sha512-AZkcAA5vnN/v4PDqKyMR5lx7hZttPDgClv83E//FMNhR2TMcLUhfRUBHCmSl0oi9zMgDDqRUJkSxO3wm85+XLg==",
+      "notice_status": "packaged_original_notices",
+      "notices": [
+        {
+          "path": "LICENSE",
+          "sha256": "a67b34a24a5daddcce46aea68c5004e4442bbfb63690329fa607bf4de4269794"
+        }
+      ]
+    },
+    {
+      "id": "@protobufjs/codegen@2.0.5",
+      "name": "@protobufjs/codegen",
+      "version": "2.0.5",
+      "distribution": [
+        "external_server"
+      ],
+      "declared_license": "BSD-3-Clause",
+      "integrity": "sha512-zgXFLzW3Ap33e6d0Wlj4MGIm6Ce8O89n/apUaGNB/jx+hw+ruWEp7EwGUshdLKVRCxZW12fp9r40E1mQrf/34g==",
+      "notice_status": "packaged_original_notices",
+      "notices": [
+        {
+          "path": "LICENSE",
+          "sha256": "a67b34a24a5daddcce46aea68c5004e4442bbfb63690329fa607bf4de4269794"
+        }
+      ]
+    },
+    {
+      "id": "@protobufjs/eventemitter@1.1.1",
+      "name": "@protobufjs/eventemitter",
+      "version": "1.1.1",
+      "distribution": [
+        "external_server"
+      ],
+      "declared_license": "BSD-3-Clause",
+      "integrity": "sha512-vW1GmwMZNnL+gMRaovlh9yZX74kc+TTU3FObkkurpMaRtBfLP3ldjS9KQWlwZgraRE0+dheEEoAxdzcJQ8eXZg==",
+      "notice_status": "packaged_original_notices",
+      "notices": [
+        {
+          "path": "LICENSE",
+          "sha256": "a67b34a24a5daddcce46aea68c5004e4442bbfb63690329fa607bf4de4269794"
+        }
+      ]
+    },
+    {
+      "id": "@protobufjs/fetch@1.1.1",
+      "name": "@protobufjs/fetch",
+      "version": "1.1.1",
+      "distribution": [
+        "external_server"
+      ],
+      "declared_license": "BSD-3-Clause",
+      "integrity": "sha512-GpptLrs57adMSuHi3VNj0mAF8dwh36LMaYF6XyJ6JMWlVsc+t42tm1HSEDmOs3A8fC9yyeisgLhsTVQokOZ0zw==",
+      "notice_status": "packaged_original_notices",
+      "notices": [
+        {
+          "path": "LICENSE",
+          "sha256": "a67b34a24a5daddcce46aea68c5004e4442bbfb63690329fa607bf4de4269794"
+        }
+      ]
+    },
+    {
+      "id": "@protobufjs/float@1.0.2",
+      "name": "@protobufjs/float",
+      "version": "1.0.2",
+      "distribution": [
+        "external_server"
+      ],
+      "declared_license": "BSD-3-Clause",
+      "integrity": "sha512-Ddb+kVXlXst9d+R9PfTIxh1EdNkgoRe5tOX6t01f1lYWOvJnSPDBlG241QLzcyPdoNTsblLUdujGSE4RzrTZGQ==",
+      "notice_status": "packaged_original_notices",
+      "notices": [
+        {
+          "path": "LICENSE",
+          "sha256": "a67b34a24a5daddcce46aea68c5004e4442bbfb63690329fa607bf4de4269794"
+        }
+      ]
+    },
+    {
+      "id": "@protobufjs/path@1.1.2",
+      "name": "@protobufjs/path",
+      "version": "1.1.2",
+      "distribution": [
+        "external_server"
+      ],
+      "declared_license": "BSD-3-Clause",
+      "integrity": "sha512-6JOcJ5Tm08dOHAbdR3GrvP+yUUfkjG5ePsHYczMFLq3ZmMkAD98cDgcT2iA1lJ9NVwFd4tH/iSSoe44YWkltEA==",
+      "notice_status": "packaged_original_notices",
+      "notices": [
+        {
+          "path": "LICENSE",
+          "sha256": "a67b34a24a5daddcce46aea68c5004e4442bbfb63690329fa607bf4de4269794"
+        }
+      ]
+    },
+    {
+      "id": "@protobufjs/pool@1.1.0",
+      "name": "@protobufjs/pool",
+      "version": "1.1.0",
+      "distribution": [
+        "external_server"
+      ],
+      "declared_license": "BSD-3-Clause",
+      "integrity": "sha512-0kELaGSIDBKvcgS4zkjz1PeddatrjYcmMWOlAuAPwAeccUrPHdUqo/J6LiymHHEiJT5NrF1UVwxY14f+fy4WQw==",
+      "notice_status": "packaged_original_notices",
+      "notices": [
+        {
+          "path": "LICENSE",
+          "sha256": "a67b34a24a5daddcce46aea68c5004e4442bbfb63690329fa607bf4de4269794"
+        }
+      ]
+    },
+    {
+      "id": "@protobufjs/utf8@1.1.2",
+      "name": "@protobufjs/utf8",
+      "version": "1.1.2",
+      "distribution": [
+        "external_server"
+      ],
+      "declared_license": "BSD-3-Clause",
+      "integrity": "sha512-b1UQwcEZ4yCnMCD8DAL1VlbvBJE9/IX4FTIp7BG1xYpf29SLazLSrqUkj4w7Y5y7cCVP6E5tcqqcI0xemPkHug==",
+      "notice_status": "packaged_original_notices",
+      "notices": [
+        {
+          "path": "LICENSE",
+          "sha256": "a67b34a24a5daddcce46aea68c5004e4442bbfb63690329fa607bf4de4269794"
+        }
+      ]
+    },
+    {
+      "id": "@types/node@26.6.5",
+      "name": "@types/node",
+      "version": "26.6.5",
+      "distribution": [
+        "external_server"
+      ],
+      "declared_license": "MIT",
+      "integrity": "sha512-uMzsv9stDdofIZBx4UGh4Z9ZgXnGC9seRDscilBcTHAeOFk67MZg/k9bWVfO+bk4qZmG+l52hRnLwUiH2LnJTg==",
+      "notice_status": "packaged_original_notices",
+      "notices": [
+        {
+          "path": "LICENSE",
+          "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383"
+        }
+      ]
+    },
+    {
+      "id": "agent-base@7.1.4",
+      "name": "agent-base",
+      "version": "7.1.4",
+      "distribution": [
+        "external_server"
+      ],
+      "declared_license": "MIT",
+      "integrity": "sha512-MnA+YT8fwfJPgBx3m60MNqakm30XOkyIoH1y6huTQvC0PwZG7ki8NacLBcrPbNoo8vEZy7Jpuk7+jMO+CUovTQ==",
+      "notice_status": "packaged_original_notices",
+      "notices": [
+        {
+          "path": "LICENSE",
+          "sha256": "8d8c55319c7729d57be811c747452636688d54f19701ee0752b6b15ad3771d9a"
+        }
+      ]
+    },
+    {
+      "id": "ansi-regex@5.0.1",
+      "name": "ansi-regex",
+      "version": "5.0.1",
+      "distribution": [
+        "external_server"
+      ],
+      "declared_license": "MIT",
+      "integrity": "sha512-quJQXlTSUGL2LH9SUXo8VwsY4soanhgo6LNSm84E1LBcE8s3O0wpdiRzyR9z/ZZJMlMWv37qOOb9pdJlMUEKFQ==",
+      "notice_status": "packaged_original_notices",
+      "notices": [
+        {
+          "path": "license",
+          "sha256": "48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0"
+        }
+      ]
+    },
+    {
+      "id": "ansi-regex@6.4.0",
+      "name": "ansi-regex",
+      "version": "6.4.0",
+      "distribution": [
+        "external_server"
+      ],
+      "declared_license": "MIT",
+      "integrity": "sha512-KzTVk2tCWAHtYrvvvaP8bJKJq2pVinhLcGEQdtLIYPbmNGNyYe8QwNaTUYQp2J7/vIsUKt5QCqAfUkYyG9DkOw==",
+      "notice_status": "packaged_original_notices",
+      "notices": [
+        {
+          "path": "license",
+          "sha256": "5c932d88256b4ab958f64a856fa48e8bd1f55bc1d96b8149c65689e0c61789d3"
+        }
+      ]
+    },
+    {
+      "id": "ansi-styles@4.3.0",
+      "name": "ansi-styles",
+      "version": "4.3.0",
+      "distribution": [
+        "external_server"
+      ],
+      "declared_license": "MIT",
+      "integrity": "sha512-zbB9rCJAT1rbjiVDb2hqKFHNYLxgtk8NURxZ3IZwD3F6NtxbXZQCnnSi1Lkx+IDohdPlFp222wVALIheZJQSEg==",
+      "notice_status": "packaged_original_notices",
+      "notices": [
+        {
+          "path": "license",
+          "sha256": "48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0"
+        }
+      ]
+    },
+    {
+      "id": "ansi-styles@6.2.3",
+      "name": "ansi-styles",
+      "version": "6.2.3",
+      "distribution": [
+        "external_server"
+      ],
+      "declared_license": "MIT",
+      "integrity": "sha512-4Dj6M28JB+oAH8kFkTLUo+a2jwOFkuqb3yucU0CANcRRUbxS0cP0nZYCGjcc3BNXwRIsUVmDGgzawme7zvJHvg==",
+      "notice_status": "packaged_original_notices",
+      "notices": [
+        {
+          "path": "license",
+          "sha256": "5c932d88256b4ab958f64a856fa48e8bd1f55bc1d96b8149c65689e0c61789d3"
+        }
+      ]
+    },
+    {
+      "id": "balanced-match@1.0.2",
+      "name": "balanced-match",
+      "version": "1.0.2",
+      "distribution": [
+        "external_server"
+      ],
+      "declared_license": "MIT",
+      "integrity": "sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==",
+      "notice_status": "packaged_original_notices",
+      "notices": [
+        {
+          "path": "LICENSE.md",
+          "sha256": "a1bd5deadb6a06dd74efa852c1b8b23f63b67f2214fbe9c8bd591da51da69268"
+        }
+      ]
+    },
+    {
+      "id": "base64-js@1.5.1",
+      "name": "base64-js",
+      "version": "1.5.1",
+      "distribution": [
+        "external_server"
+      ],
+      "declared_license": "MIT",
+      "integrity": "sha512-AKpaYlHn8t4SVbOHCy+b5+KKgvR4vrsD8vbvrbiQJps7fKDTkjkDry6ji0rUJjC0kzbNePLwzxq8iypo41qeWA==",
+      "notice_status": "packaged_original_notices",
+      "notices": [
+        {
+          "path": "LICENSE",
+          "sha256": "5b37224c080cdcc97c871ada971c224e9926370fe74f11b539aa1cf9f3b1aca1"
+        }
+      ]
+    },
+    {
+      "id": "bignumber.js@9.3.1",
+      "name": "bignumber.js",
+      "version": "9.3.1",
+      "distribution": [
+        "external_server"
+      ],
+      "declared_license": "MIT",
+      "integrity": "sha512-Ko0uX15oIUS7wJ3Rb30Fs6SkVbLmPBAKdlm7q9+ak9bbIeFf0MwuBsQV6z7+X768/cHsfg+WlysDWJcmthjsjQ==",
+      "notice_status": "packaged_original_notices",
+      "notices": [
+        {
+          "path": "LICENCE.md",
+          "sha256": "def75ba75d6426f1c3f02addf8e175fbe6e0d8a82e541cbdffc16d2bd8fd7d6a"
+        }
+      ]
+    },
+    {
+      "id": "brace-expansion@2.1.7",
+      "name": "brace-expansion",
+      "version": "2.1.7",
+      "distribution": [
+        "external_server"
+      ],
+      "declared_license": "MIT",
+      "integrity": "sha512-uZbew1NqdmPDTMJ8ah1y+b+9QEJrfkXFk3RcTQw3X0jW/xRUvFKsg1CfQdSYGdTbXZWExtU3J3ccxtnfw1Fi0g==",
+      "notice_status": "packaged_original_notices",
+      "notices": [
+        {
+          "path": "LICENSE",
+          "sha256": "68f12f6e2c33688699249c01d8f9623c534da20aa71989c57b061b7bc1676d14"
+        }
+      ]
+    },
+    {
+      "id": "buffer-equal-constant-time@1.0.1",
+      "name": "buffer-equal-constant-time",
+      "version": "1.0.1",
+      "distribution": [
+        "external_server"
+      ],
+      "declared_license": "BSD-3-Clause",
+      "integrity": "sha512-zRpUiDwd/xk6ADqPMATG8vc9VPrkck7T07OIx0gnjmJAnHnTVXNQG3vfvWNuiZIkwu9KrKdA1iJKfsfTVxE6NA==",
+      "notice_status": "packaged_original_notices",
+      "notices": [
+        {
+          "path": "LICENSE.txt",
+          "sha256": "751d0e80fb5c828f8c3de198cc760e1e05377e47c8263ab6ee2f10cdc19ba658"
+        }
+      ]
+    },
+    {
+      "id": "cliui@8.0.1",
+      "name": "cliui",
+      "version": "8.0.1",
+      "distribution": [
+        "external_server"
+      ],
+      "declared_license": "ISC",
+      "integrity": "sha512-BSeNnyus75C4//NQ9gQt1/csTXyo/8Sb+afLAkzAptFuMsod9HFokGNudZpi/oQV73hnVK+sR+5PVRMd+Dr7YQ==",
+      "notice_status": "packaged_original_notices",
+      "notices": [
+        {
+          "path": "LICENSE.txt",
+          "sha256": "2dc0465729366c3a7890dfa9e972a1ba7048a26c02116fb8b419a6a1ac110149"
+        }
+      ]
+    },
+    {
+      "id": "color-convert@2.0.1",
+      "name": "color-convert",
+      "version": "2.0.1",
+      "distribution": [
+        "external_server"
+      ],
+      "declared_license": "MIT",
+      "integrity": "sha512-RRECPsj7iu/xb5oKYcsFHSppFNnsj/52OVTRKb4zP5onXwVF3zVmmToNcOfGC+CRDpfK/U584fMg38ZHCaElKQ==",
+      "notice_status": "packaged_original_notices",
+      "notices": [
+        {
+          "path": "LICENSE",
+          "sha256": "693866fc419c6f61c8570438ec00659d156ec2b4d4a4d04091711f5f11a365d4"
+        }
+      ]
+    },
+    {
+      "id": "color-name@1.1.4",
+      "name": "color-name",
+      "version": "1.1.4",
+      "distribution": [
+        "external_server"
+      ],
+      "declared_license": "MIT",
+      "integrity": "sha512-dOy+3AuW3a2wNbZHIuMZpTcgjGuLU/uBL/ubcZF9OXbDo8ff4O8yVp5Bf0efS8uEoYo5q4Fx7dY9OgQGXgAsQA==",
+      "notice_status": "packaged_original_notices",
+      "notices": [
+        {
+          "path": "LICENSE",
+          "sha256": "c064f7a3e353bc1bc977f3c897941c75ef763f44f41677e0a15370ca0853d6e2"
+        }
+      ]
+    },
+    {
+      "id": "cross-spawn@7.0.6",
+      "name": "cross-spawn",
+      "version": "7.0.6",
+      "distribution": [
+        "external_server"
+      ],
+      "declared_license": "MIT",
+      "integrity": "sha512-uV2QOWP2nWzsy2aMp8aRibhi9dlzF5Hgh5SHaB9OiTGEyDTiJJyx0uy51QXdyWbtAHNua4XJzUKca3OzKUd3vA==",
+      "notice_status": "packaged_original_notices",
+      "notices": [
+        {
+          "path": "LICENSE",
+          "sha256": "aaa78451b6fecd1b9c4594c796c133c0e90cad100372ff8bc6de615e9ef9adf1"
+        }
+      ]
+    },
+    {
+      "id": "data-uri-to-buffer@4.0.1",
+      "name": "data-uri-to-buffer",
+      "version": "4.0.1",
+      "distribution": [
+        "external_server"
+      ],
+      "declared_license": "MIT",
+      "integrity": "sha512-0R9ikRb668HB7QDxT1vkpuUBtqc53YyAwMwGeUFKRojY/NWKvdZ+9UYtRfGmhqNbRkTSVpMbmyhXipFFv2cb/A==",
+      "notice_status": "packaged_readme_notice",
+      "notices": [
+        {
+          "path": "README.md",
+          "sha256": "a7cc4332acfa1f9b6530e01aac77fefe74f2efa32579215fddaa473013f9a25c"
+        }
+      ]
+    },
+    {
+      "id": "debug@4.4.3",
+      "name": "debug",
+      "version": "4.4.3",
+      "distribution": [
+        "external_server"
+      ],
+      "declared_license": "MIT",
+      "integrity": "sha512-RGwwWnwQvkVfavKVt22FGLw+xYSdzARwm0ru6DhTVA3umU5hZc28V3kO4stgYryrTlLpuvgI9GiijltAjNbcqA==",
+      "notice_status": "packaged_original_notices",
+      "notices": [
+        {
+          "path": "LICENSE",
+          "sha256": "3a61c6c96caf5c1d9b623fb9b04c822b783dfcb78aa7e49c76a3f643e6ed7f95"
+        }
+      ]
+    },
+    {
+      "id": "duplexify@4.1.3",
+      "name": "duplexify",
+      "version": "4.1.3",
+      "distribution": [
+        "external_server"
+      ],
+      "declared_license": "MIT",
+      "integrity": "sha512-M3BmBhwJRZsSx38lZyhE53Csddgzl5R7xGJNk7CVddZD6CcmwMCH8J+7AprIrQKH7TonKxaCjcv27Qmf+sQ+oA==",
+      "notice_status": "packaged_original_notices",
+      "notices": [
+        {
+          "path": "LICENSE",
+          "sha256": "3fe8d55a98dbf260eace67c00cf9bc53edb46234e840098a0b93df3096b97fb6"
+        }
+      ]
+    },
+    {
+      "id": "eastasianwidth@0.2.0",
+      "name": "eastasianwidth",
+      "version": "0.2.0",
+      "distribution": [
+        "external_server"
+      ],
+      "declared_license": "MIT",
+      "integrity": "sha512-I88TYZWc9XiYHRQ4/3c5rjjfgkjhLyW2luGIheGERbNQ6OY7yTybanSpDXZa8y7VUP9YmDcYa+eyq4ca7iLqWA==",
+      "notice_status": "upstream_verified_notice",
+      "notices": [
+        {
+          "path": "upstream/eastasianwidth-0.2.0-MIT.txt",
+          "sha256": "94aa6016fb9d436508366433e9caba061443ca58f4c7eb515caec7badf90ae5a"
+        }
+      ],
+      "publication_provenance": {
+        "license": "MIT",
+        "status": "upstream_verified_notice",
+        "registry": "https://registry.npmjs.org/eastasianwidth/0.2.0",
+        "gitHead": "b89f04d44dc786885615e94cd6e2ba1ef7866fa4",
+        "tree": "https://api.github.com/repos/komagata/eastasianwidth/git/trees/b89f04d44dc786885615e94cd6e2ba1ef7866fa4?recursive=1",
+        "packaged_original_notice_present": false,
+        "notice": "eastasianwidth-0.2.0-MIT.txt",
+        "notice_commit": "1d41951a59d63fb2d77cda021050fc070cae424a",
+        "noticeUrl": "https://raw.githubusercontent.com/komagata/eastasianwidth/1d41951a59d63fb2d77cda021050fc070cae424a/MIT-LICENSE.txt",
+        "sha256": "94aa6016fb9d436508366433e9caba061443ca58f4c7eb515caec7badf90ae5a",
+        "applicability": {
+          "basis": "explicit_maintainer_version_clarification",
+          "clarification_commit": "f42b1e7b2a403d2050dda1141211b4e198e50e70",
+          "clarification_url": "https://raw.githubusercontent.com/komagata/eastasianwidth/f42b1e7b2a403d2050dda1141211b4e198e50e70/LICENSE-NOTES.md",
+          "clarification_sha256": "652d0486b433ecd1e91c2a933f6d320f651bda1d7bb32ba50a48cf7329bb81b3",
+          "note": "The notice was added during version 0.3.0; the pinned maintainer clarification explicitly assigns it to historical 0.2.0. The copyright line has no year. This is not a publication-commit notice or a claim that the 0.3.0 source is identical."
+        }
+      }
+    },
+    {
+      "id": "ecdsa-sig-formatter@1.0.11",
+      "name": "ecdsa-sig-formatter",
+      "version": "1.0.11",
+      "distribution": [
+        "external_server"
+      ],
+      "declared_license": "Apache-2.0",
+      "integrity": "sha512-nagl3RYrbNv6kQkeJIpt6NJZy8twLB/2vtz6yN9Z4vRKHN4/QZJIEbqohALSgwKdnksuY3k5Addp5lg8sVoVcQ==",
+      "notice_status": "packaged_original_notices",
+      "notices": [
+        {
+          "path": "LICENSE",
+          "sha256": "50a6b24f8defc31a078aa9799a91d776f83948071574854f12473362aee74d0d"
+        }
+      ]
+    },
+    {
+      "id": "emoji-regex@8.0.0",
+      "name": "emoji-regex",
+      "version": "8.0.0",
+      "distribution": [
+        "external_server"
+      ],
+      "declared_license": "MIT",
+      "integrity": "sha512-MSjYzcWNOA0ewAHpz0MxpYFvwg6yjy1NG3xteoqz644VCo/RPgnr1/GGt+ic3iJTzQ8Eu3TdM14SawnVUmGE6A==",
+      "notice_status": "packaged_original_notices",
+      "notices": [
+        {
+          "path": "LICENSE-MIT.txt",
+          "sha256": "483acb265f182907d1caf6cff9c16c96f31325ed23792832cc5d8b12d5f88c8a"
+        }
+      ]
+    },
+    {
+      "id": "emoji-regex@9.2.2",
+      "name": "emoji-regex",
+      "version": "9.2.2",
+      "distribution": [
+        "external_server"
+      ],
+      "declared_license": "MIT",
+      "integrity": "sha512-L18DaJsXSUk2+42pv8mLs5jJT2hqFkFE4j21wOmgbUqsZ2hL72NsUU785g9RXgo3s0ZNgVl42TiHp3ZtOv/Vyg==",
+      "notice_status": "packaged_original_notices",
+      "notices": [
+        {
+          "path": "LICENSE-MIT.txt",
+          "sha256": "483acb265f182907d1caf6cff9c16c96f31325ed23792832cc5d8b12d5f88c8a"
+        }
+      ]
+    },
+    {
+      "id": "end-of-stream@1.4.5",
+      "name": "end-of-stream",
+      "version": "1.4.5",
+      "distribution": [
+        "external_server"
+      ],
+      "declared_license": "MIT",
+      "integrity": "sha512-ooEGc6HP26xXq/N+GCGOT0JKCLDGrq2bQUZrQ7gyrJiZANJ/8YDTxTpQBXGMn+WbIQXNVpyWymm7KYVICQnyOg==",
+      "notice_status": "packaged_original_notices",
+      "notices": [
+        {
+          "path": "LICENSE",
+          "sha256": "3fe8d55a98dbf260eace67c00cf9bc53edb46234e840098a0b93df3096b97fb6"
+        }
+      ]
+    },
+    {
+      "id": "entities@8.1.0",
+      "name": "entities",
+      "version": "8.1.0",
+      "distribution": [
+        "external_server"
+      ],
+      "declared_license": "BSD-2-Clause",
+      "integrity": "sha512-kxL7msIffSuh9aaFAMD7rxAIuTRMAHMeBtgHW2yUdWw732ZNh4MehkF2gdjvtdmikkaIP9bFDDJOPlsvm7avrA==",
+      "notice_status": "packaged_original_notices",
+      "notices": [
+        {
+          "path": "LICENSE",
+          "sha256": "cb992345949ccd6e8394b2cd6c465f7b897c864f845937dbf64e8997f389e164"
+        }
+      ]
+    },
+    {
+      "id": "escalade@3.2.0",
+      "name": "escalade",
+      "version": "3.2.0",
+      "distribution": [
+        "external_server"
+      ],
+      "declared_license": "MIT",
+      "integrity": "sha512-WUj2qlxaQtO4g6Pq5c29GTcWGDyd8itL8zTlipgECz3JesAiiOKotd8JU6otB3PACgG6xkJUyVhboMS+bje/jA==",
+      "notice_status": "packaged_original_notices",
+      "notices": [
+        {
+          "path": "license",
+          "sha256": "9a9edad7baae52622bddf3c15b2ef8a33d2c89f2d25408ad13e8a7481c6b0c97"
+        }
+      ]
+    },
+    {
+      "id": "extend@3.0.2",
+      "name": "extend",
+      "version": "3.0.2",
+      "distribution": [
+        "external_server"
+      ],
+      "declared_license": "MIT",
+      "integrity": "sha512-fjquC59cD7CyW6urNXK0FBufkZcoiGG80wTuPujX590cB5Ttln20E2UB4S/WARVqhXffZl2LNgS+gQdPIIim/g==",
+      "notice_status": "packaged_original_notices",
+      "notices": [
+        {
+          "path": "LICENSE",
+          "sha256": "97af7428f93afbab9bf79cd09254da1357161794f4255eb1b4599f04dd2d2e7c"
+        }
+      ]
+    },
+    {
+      "id": "fast-deep-equal@3.1.3",
+      "name": "fast-deep-equal",
+      "version": "3.1.3",
+      "distribution": [
+        "external_server"
+      ],
+      "declared_license": "MIT",
+      "integrity": "sha512-f3qQ9oQy9j2AhBe/H9VC91wLmKBCCU/gDOnKNAYG5hswO7BLKj09Hc5HYNz9cGI++xlpDCIgDaitVs03ATR84Q==",
+      "notice_status": "packaged_original_notices",
+      "notices": [
+        {
+          "path": "LICENSE",
+          "sha256": "7bf9b2de73a6b356761c948d0e9eeb4be6c1270bd04c79cd489c1e400ffdfc1a"
+        }
+      ]
+    },
+    {
+      "id": "fetch-blob@3.2.0",
+      "name": "fetch-blob",
+      "version": "3.2.0",
+      "distribution": [
+        "external_server"
+      ],
+      "declared_license": "MIT",
+      "integrity": "sha512-7yAQpD2UMJzLi1Dqv7qFYnPbaPx7ZfFK6PiIxQ4PfkGPyNyl2Ugx+a/umUonmKqjhM4DnfbMvdX6otXq83soQQ==",
+      "notice_status": "packaged_original_notices",
+      "notices": [
+        {
+          "path": "LICENSE",
+          "sha256": "a5edccac92c3aa845694dcfaa72a0c098c1ae40d5ca6a37e4e59d778cf8e29bd"
+        }
+      ]
+    },
+    {
+      "id": "foreground-child@3.3.1",
+      "name": "foreground-child",
+      "version": "3.3.1",
+      "distribution": [
+        "external_server"
+      ],
+      "declared_license": "ISC",
+      "integrity": "sha512-gIXjKqtFuWEgzFRJA9WCQeSJLZDjgJUOMCMzxtvFq/37KojM1BFGufqsCy0r4qSQmYLsZYMeyRqzIWOMup03sw==",
+      "notice_status": "packaged_original_notices",
+      "notices": [
+        {
+          "path": "LICENSE",
+          "sha256": "93f5d82a8d59442fe3275383453a255fef761647fb28265644010ba799806148"
+        }
+      ]
+    },
+    {
+      "id": "formdata-polyfill@4.0.10",
+      "name": "formdata-polyfill",
+      "version": "4.0.10",
+      "distribution": [
+        "external_server"
+      ],
+      "declared_license": "MIT",
+      "integrity": "sha512-buewHzMvYL29jdeQTVILecSaZKnt/RJWjoZCF5OW60Z67/GmSLBkOFM7qh1PI3zFNtJbaZL5eQu1vLfazOwj4g==",
+      "notice_status": "packaged_original_notices",
+      "notices": [
+        {
+          "path": "LICENSE",
+          "sha256": "435a6437e47e5e479942255680e7fbe5f333d55234ada1c35f6115ca641d5bb4"
+        }
+      ]
+    },
+    {
+      "id": "functional-red-black-tree@1.0.1",
+      "name": "functional-red-black-tree",
+      "version": "1.0.1",
+      "distribution": [
+        "external_server"
+      ],
+      "declared_license": "MIT",
+      "integrity": "sha512-dsKNQNdj6xA3T+QlADDA7mOSlX0qiMINjn0cgr+eGHGsbSHzTabcIogz2+p/iqP1Xs6EP/sS2SbqH+brGTbq0g==",
+      "notice_status": "packaged_original_notices",
+      "notices": [
+        {
+          "path": "LICENSE",
+          "sha256": "e67aed7df22dc8031e4fcf5338fe91cb33e3817e5c58a99a2a2802eea9069791"
+        }
+      ]
+    },
+    {
+      "id": "gaxios@7.1.3",
+      "name": "gaxios",
+      "version": "7.1.3",
+      "distribution": [
+        "external_server"
+      ],
+      "declared_license": "Apache-2.0",
+      "integrity": "sha512-YGGyuEdVIjqxkxVH1pUTMY/XtmmsApXrCVv5EU25iX6inEPbV+VakJfLealkBtJN69AQmh1eGOdCl9Sm1UP6XQ==",
+      "notice_status": "packaged_original_notices",
+      "notices": [
+        {
+          "path": "LICENSE",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+        }
+      ]
+    },
+    {
+      "id": "gaxios@7.3.1",
+      "name": "gaxios",
+      "version": "7.3.1",
+      "distribution": [
+        "external_server"
+      ],
+      "declared_license": "Apache-2.0",
+      "integrity": "sha512-kB3rzJV7d9juLZh8/56QTXCwQfxyhdOMdyYk1HdQKFtF8TJTDTZQJtixWIwXdE9Jji91mC41DUNpjleo4L4eAQ==",
+      "notice_status": "packaged_original_notices",
+      "notices": [
+        {
+          "path": "LICENSE",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+        }
+      ]
+    },
+    {
+      "id": "gaxios@8.3.2",
+      "name": "gaxios",
+      "version": "8.3.2",
+      "distribution": [
+        "external_server"
+      ],
+      "declared_license": "Apache-2.0",
+      "integrity": "sha512-7VsaTExxjbDv2ZK1YuC4jbgfN33NI/6/7zdYWUHB6mcg51v4tCBZe+xzjqPzOpVzI+C5k1Kk9OQ80WVrXAHOqw==",
+      "notice_status": "packaged_original_notices",
+      "notices": [
+        {
+          "path": "LICENSE",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+        }
+      ]
+    },
+    {
+      "id": "gcp-metadata@8.1.4",
+      "name": "gcp-metadata",
+      "version": "8.1.4",
+      "distribution": [
+        "external_server"
+      ],
+      "declared_license": "Apache-2.0",
+      "integrity": "sha512-iJ9KMsiu+xKtNRX0PmGLSaIU3bUBAyzWTyqKemKPzNPsmmsBCQYmlNg+brEbES7IHSXtdVwzBPzx1vz3FAaipw==",
+      "notice_status": "packaged_original_notices",
+      "notices": [
+        {
+          "path": "LICENSE",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+        }
+      ]
+    },
+    {
+      "id": "gcp-metadata@9.2.2",
+      "name": "gcp-metadata",
+      "version": "9.2.2",
+      "distribution": [
+        "external_server"
+      ],
+      "declared_license": "Apache-2.0",
+      "integrity": "sha512-hlaHpCBoNCzoUjMnBZq0LbUiYqPAhXFaAgyNwQqwWU44TZIYJK3RD3o2wkNdvPs8nnUXqJjTudnodLJkLMBjow==",
+      "notice_status": "packaged_original_notices",
+      "notices": [
+        {
+          "path": "LICENSE",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+        }
+      ]
+    },
+    {
+      "id": "get-caller-file@2.0.5",
+      "name": "get-caller-file",
+      "version": "2.0.5",
+      "distribution": [
+        "external_server"
+      ],
+      "declared_license": "ISC",
+      "integrity": "sha512-DyFP3BM/3YHTQOCUL/w0OZHR0lpKeGrxotcHWcqNEdnltqFwXVfhEBQ94eIo34AfQpo0rGki4cyIiftY06h2Fg==",
+      "notice_status": "packaged_original_notices",
+      "notices": [
+        {
+          "path": "LICENSE.md",
+          "sha256": "902dbb4154679fb2b8d7c33878183f45b268d01eae5e5033dddaa8852d45f213"
+        }
+      ]
+    },
+    {
+      "id": "glob@10.5.0",
+      "name": "glob",
+      "version": "10.5.0",
+      "distribution": [
+        "external_server"
+      ],
+      "declared_license": "ISC",
+      "integrity": "sha512-DfXN8DfhJ7NH3Oe7cFmu3NCu1wKbkReJ8TorzSAFbSKrlNaQSKfIzqYqVY8zlbs2NLBbWpRiU52GX2PbaBVNkg==",
+      "notice_status": "packaged_original_notices",
+      "notices": [
+        {
+          "path": "LICENSE",
+          "sha256": "cdbc258d13806538e727964c2436a8806e6e2496ccd616224aace6f7bf98dbc1"
+        }
+      ]
+    },
+    {
+      "id": "google-auth-library@10.5.0",
+      "name": "google-auth-library",
+      "version": "10.5.0",
+      "distribution": [
+        "external_server"
+      ],
+      "declared_license": "Apache-2.0",
+      "integrity": "sha512-7ABviyMOlX5hIVD60YOfHw4/CxOfBhyduaYB+wbFWCWoni4N7SLcV46hrVRktuBbZjFC9ONyqamZITN7q3n32w==",
+      "notice_status": "packaged_original_notices",
+      "notices": [
+        {
+          "path": "LICENSE",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+        }
+      ]
+    },
+    {
+      "id": "google-auth-library@11.3.1",
+      "name": "google-auth-library",
+      "version": "11.3.1",
+      "distribution": [
+        "external_server"
+      ],
+      "declared_license": "Apache-2.0",
+      "integrity": "sha512-mQS0R2Ev/DKkzuWSYtDeq15uhDeaWuT2qzLYqJ41LmooxVKHmn5ut3pc6dlHY6wfHW/D7FBmOYjAtkjaD1A7qA==",
+      "notice_status": "packaged_original_notices",
+      "notices": [
+        {
+          "path": "LICENSE",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+        }
+      ]
+    },
+    {
+      "id": "google-gax@5.0.8",
+      "name": "google-gax",
+      "version": "5.0.8",
+      "distribution": [
+        "external_server"
+      ],
+      "declared_license": "Apache-2.0",
+      "integrity": "sha512-M4vpZcXQIC1gqIVGQ7eaU3jXQA6zecStyTXu514TYfThlgSurYJOxHZo9fzU6hAgwPWvuEynAVHWyaIk80VeEA==",
+      "notice_status": "upstream_verified_notice",
+      "notices": [
+        {
+          "path": "upstream/google-cloud-node-Apache-2.0.txt",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+        }
+      ],
+      "publication_provenance": {
+        "license": "Apache-2.0",
+        "status": "upstream_verified_notice",
+        "registry": "https://registry.npmjs.org/google-gax/5.0.8",
+        "gitHead": "6b9fd1af346a20479615704d40435f6ae0ecfba6",
+        "manifest": "https://raw.githubusercontent.com/googleapis/google-cloud-node/6b9fd1af346a20479615704d40435f6ae0ecfba6/core/packages/gax/package.json",
+        "notice": "google-cloud-node-Apache-2.0.txt",
+        "noticeUrl": "https://raw.githubusercontent.com/googleapis/google-cloud-node/6b9fd1af346a20479615704d40435f6ae0ecfba6/LICENSE",
+        "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+      }
+    },
+    {
+      "id": "google-gax@6.13.0",
+      "name": "google-gax",
+      "version": "6.13.0",
+      "distribution": [
+        "external_server"
+      ],
+      "declared_license": "Apache-2.0",
+      "integrity": "sha512-7Q60oxwV2M2zWytwB5siHUlip1jTVWoSxfF25NI13wGKlJ9jUwyWvKWrDfXjAuBOI5NVrv0R/tPaYi80V/5ZFg==",
+      "notice_status": "packaged_original_notices",
+      "notices": [
+        {
+          "path": "LICENSE",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+        }
+      ]
+    },
+    {
+      "id": "google-logging-utils@1.1.3",
+      "name": "google-logging-utils",
+      "version": "1.1.3",
+      "distribution": [
+        "external_server"
+      ],
+      "declared_license": "Apache-2.0",
+      "integrity": "sha512-eAmLkjDjAFCVXg7A1unxHsLf961m6y17QFqXqAXGj/gVkKFrEICfStRfwUlGNfeCEjNRa32JEWOUTlYXPyyKvA==",
+      "notice_status": "packaged_original_notices",
+      "notices": [
+        {
+          "path": "LICENSE",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+        }
+      ]
+    },
+    {
+      "id": "google-logging-utils@2.1.0",
+      "name": "google-logging-utils",
+      "version": "2.1.0",
+      "distribution": [
+        "external_server"
+      ],
+      "declared_license": "Apache-2.0",
+      "integrity": "sha512-1R6uiq6XhXW2ZrcGtZpGgVDsYGzSmveVOn8Pp37qe1fbThHZ34e3t3eXj5mVu6PFSVx9fvB1KNVnYgVtq/BRcA==",
+      "notice_status": "packaged_original_notices",
+      "notices": [
+        {
+          "path": "LICENSE",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+        }
+      ]
+    },
+    {
+      "id": "gtoken@8.0.0",
+      "name": "gtoken",
+      "version": "8.0.0",
+      "distribution": [
+        "external_server"
+      ],
+      "declared_license": "MIT",
+      "integrity": "sha512-+CqsMbHPiSTdtSO14O51eMNlrp9N79gmeqmXeouJOhfucAedHw9noVe/n5uJk3tbKE6a+6ZCQg3RPhVhHByAIw==",
+      "notice_status": "packaged_original_notices",
+      "notices": [
+        {
+          "path": "LICENSE",
+          "sha256": "ace51ee77a0c6ebf8885e3b1de75b410f77fbc76602b063fbfd74d96f8574296"
+        }
+      ]
+    },
+    {
+      "id": "http-proxy-agent@7.0.2",
+      "name": "http-proxy-agent",
+      "version": "7.0.2",
+      "distribution": [
+        "external_server"
+      ],
+      "declared_license": "MIT",
+      "integrity": "sha512-T1gkAiYYDWYx3V5Bmyu7HcfcvL7mUrTWiM6yOfa3PIphViJ/gFPbvidQ+veqSOHci/PxBcDabeUNCzpOODJZig==",
+      "notice_status": "packaged_original_notices",
+      "notices": [
+        {
+          "path": "LICENSE",
+          "sha256": "71368fd0f5b4129191e9afcd1e1ef2dc89a9090d3e4d80bbab92dafd032b3bef"
+        }
+      ]
+    },
+    {
+      "id": "https-proxy-agent@7.0.6",
+      "name": "https-proxy-agent",
+      "version": "7.0.6",
+      "distribution": [
+        "external_server"
+      ],
+      "declared_license": "MIT",
+      "integrity": "sha512-vK9P5/iUfdl95AI+JVyUuIcVtd4ofvtrOr3HNtM2yxC9bnMbEdp3x01OhQNnjb8IJYi38VlTE3mBXwcfvywuSw==",
+      "notice_status": "packaged_original_notices",
+      "notices": [
+        {
+          "path": "LICENSE",
+          "sha256": "8d8c55319c7729d57be811c747452636688d54f19701ee0752b6b15ad3771d9a"
+        }
+      ]
+    },
+    {
+      "id": "inherits@2.0.4",
+      "name": "inherits",
+      "version": "2.0.4",
+      "distribution": [
+        "external_server"
+      ],
+      "declared_license": "ISC",
+      "integrity": "sha512-k/vGaX4/Yla3WzyMCvTQOXYeIHvqOKtnqBduzTHpzpQZzAskKMhZ2K+EnBiSM9zGSoIFeMpXKxa4dYeZIQqewQ==",
+      "notice_status": "packaged_original_notices",
+      "notices": [
+        {
+          "path": "LICENSE",
+          "sha256": "5ffe28e7ade7d8f10d85d5337a73fd793dac5c462fb9a28fbf8c5046c7fbca3b"
+        }
+      ]
+    },
+    {
+      "id": "is-fullwidth-code-point@3.0.0",
+      "name": "is-fullwidth-code-point",
+      "version": "3.0.0",
+      "distribution": [
+        "external_server"
+      ],
+      "declared_license": "MIT",
+      "integrity": "sha512-zymm5+u+sCsSWyD9qNaejV3DFvhCKclKdizYaJUuHA83RLjb7nSuGnddCHGv0hk+KY7BMAlsWeK4Ueg6EV6XQg==",
+      "notice_status": "packaged_original_notices",
+      "notices": [
+        {
+          "path": "license",
+          "sha256": "48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0"
+        }
+      ]
+    },
+    {
+      "id": "isexe@2.0.0",
+      "name": "isexe",
+      "version": "2.0.0",
+      "distribution": [
+        "external_server"
+      ],
+      "declared_license": "ISC",
+      "integrity": "sha512-RHxMLp9lnKHGHRng9QFhRCMbYAcVpn69smSGcq3f36xjgVVWThj4qqLbTLlq7Ssj8B+fIQ1EuCEGI2lKsyQeIw==",
+      "notice_status": "packaged_original_notices",
+      "notices": [
+        {
+          "path": "LICENSE",
+          "sha256": "4ec3d4c66cd87f5c8d8ad911b10f99bf27cb00cdfcff82621956e379186b016b"
+        }
+      ]
+    },
+    {
+      "id": "jackspeak@3.4.3",
+      "name": "jackspeak",
+      "version": "3.4.3",
+      "distribution": [
+        "external_server"
+      ],
+      "declared_license": "BlueOak-1.0.0",
+      "integrity": "sha512-OGlZQpz2yfahA/Rd1Y8Cd9SIEsqvXkLVoSw/cgwhnhFMDbsQFeZYoJJ7bIZBS9BcamUW96asq/npPWugM+RQBw==",
+      "notice_status": "packaged_original_notices",
+      "notices": [
+        {
+          "path": "LICENSE.md",
+          "sha256": "2c7c5d22ed5a8ee968c64757710979afcd77438c48b4a265b94e615babd8a901"
+        }
+      ]
+    },
+    {
+      "id": "json-bigint@1.0.0",
+      "name": "json-bigint",
+      "version": "1.0.0",
+      "distribution": [
+        "external_server"
+      ],
+      "declared_license": "MIT",
+      "integrity": "sha512-SiPv/8VpZuWbvLSMtTDU8hEfrZWg/mH/nV/b4o0CYbSxu1UIQPLdwKOCIyLQX+VIPO5vrLX3i8qtqFyhdPSUSQ==",
+      "notice_status": "packaged_original_notices",
+      "notices": [
+        {
+          "path": "LICENSE",
+          "sha256": "def82c085d05e795fe6a9cb5b70c48e022212355afc0e91d4de047cade28df06"
+        }
+      ]
+    },
+    {
+      "id": "jwa@2.0.1",
+      "name": "jwa",
+      "version": "2.0.1",
+      "distribution": [
+        "external_server"
+      ],
+      "declared_license": "MIT",
+      "integrity": "sha512-hRF04fqJIP8Abbkq5NKGN0Bbr3JxlQ+qhZufXVr0DvujKy93ZCbXZMHDL4EOtodSbCWxOqR8MS1tXA5hwqCXDg==",
+      "notice_status": "packaged_original_notices",
+      "notices": [
+        {
+          "path": "LICENSE",
+          "sha256": "3320319f8a5f42bc4254e65471eca7a5ea4dc8c883c4c24b4868e36b14890bcf"
+        }
+      ]
+    },
+    {
+      "id": "jws@4.0.1",
+      "name": "jws",
+      "version": "4.0.1",
+      "distribution": [
+        "external_server"
+      ],
+      "declared_license": "MIT",
+      "integrity": "sha512-EKI/M/yqPncGUUh44xz0PxSidXFr/+r0pA70+gIYhjv+et7yxM+s29Y+VGDkovRofQem0fs7Uvf4+YmAdyRduA==",
+      "notice_status": "packaged_original_notices",
+      "notices": [
+        {
+          "path": "LICENSE",
+          "sha256": "3320319f8a5f42bc4254e65471eca7a5ea4dc8c883c4c24b4868e36b14890bcf"
+        }
+      ]
+    },
+    {
+      "id": "lodash.camelcase@4.3.0",
+      "name": "lodash.camelcase",
+      "version": "4.3.0",
+      "distribution": [
+        "external_server"
+      ],
+      "declared_license": "MIT",
+      "integrity": "sha512-TwuEnCnxbc3rAvhf/LbG7tJUDzhqXyFnv3dtzLOPgCG/hODL7WFnsbwktkD7yUV0RrreP/l1PALq/YSg6VvjlA==",
+      "notice_status": "packaged_original_notices",
+      "notices": [
+        {
+          "path": "LICENSE",
+          "sha256": "ffd8b33b354585f4ce119f19c53728281e48a97b074491eb6bf6d5c5ff305272"
+        }
+      ]
+    },
+    {
+      "id": "long@5.3.2",
+      "name": "long",
+      "version": "5.3.2",
+      "distribution": [
+        "external_server"
+      ],
+      "declared_license": "Apache-2.0",
+      "integrity": "sha512-mNAgZ1GmyNhD7AuqnTG3/VQ26o760+ZYBPKjPvugO8+nLbYfX6TVpJPseBvopbdY+qpZ/lKUnmEc1LeZYS3QAA==",
+      "notice_status": "packaged_original_notices",
+      "notices": [
+        {
+          "path": "LICENSE",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+        }
+      ]
+    },
+    {
+      "id": "lru-cache@10.4.3",
+      "name": "lru-cache",
+      "version": "10.4.3",
+      "distribution": [
+        "external_server"
+      ],
+      "declared_license": "ISC",
+      "integrity": "sha512-JNAzZcXrCt42VGLuYz0zfAzDfAvJWW6AfYlDBQyDV5DClI2m5sAmK+OIO7s59XfsRsWHp02jAJrRadPRGTt6SQ==",
+      "notice_status": "packaged_original_notices",
+      "notices": [
+        {
+          "path": "LICENSE",
+          "sha256": "451ec07eeb9c4e1b86de9abdaa426462a8be48f887ec7421cf0bbb9c769555ab"
+        }
+      ]
+    },
+    {
+      "id": "minimatch@9.0.9",
+      "name": "minimatch",
+      "version": "9.0.9",
+      "distribution": [
+        "external_server"
+      ],
+      "declared_license": "ISC",
+      "integrity": "sha512-OBwBN9AL4dqmETlpS2zasx+vTeWclWzkblfZk7KTA5j3jeOONz/tRCnZomUyvNg83wL5Zv9Ss6HMJXAgL8R2Yg==",
+      "notice_status": "packaged_original_notices",
+      "notices": [
+        {
+          "path": "LICENSE",
+          "sha256": "d11323827fa4edeaafc437cc5b91b6971b335f0127efeeb42bf5122fe8657e8f"
+        }
+      ]
+    },
+    {
+      "id": "minipass@7.1.3",
+      "name": "minipass",
+      "version": "7.1.3",
+      "distribution": [
+        "external_server"
+      ],
+      "declared_license": "BlueOak-1.0.0",
+      "integrity": "sha512-tEBHqDnIoM/1rXME1zgka9g6Q2lcoCkxHLuc7ODJ5BxbP5d4c2Z5cGgtXAku59200Cx7diuHTOYfSBD8n6mm8A==",
+      "notice_status": "packaged_original_notices",
+      "notices": [
+        {
+          "path": "LICENSE.md",
+          "sha256": "8a1af140fdfbf5afd3df27f7e662f989c5b963a300020dfafce42033cae9e004"
+        }
+      ]
+    },
+    {
+      "id": "ms@2.1.3",
+      "name": "ms",
+      "version": "2.1.3",
+      "distribution": [
+        "external_server"
+      ],
+      "declared_license": "MIT",
+      "integrity": "sha512-6FlzubTLZG3J2a/NVCAleEhjzq5oxgHyaCU9yYXvcLsvoVaHJq/s5xXI6/XXP6tz7R9xAOtHnSO/tXtF3WRTlA==",
+      "notice_status": "packaged_original_notices",
+      "notices": [
+        {
+          "path": "license.md",
+          "sha256": "1662fae9b5314d11cf51284e2dcd1f006a354f7343f08712a730fcff9a359801"
+        }
+      ]
+    },
+    {
+      "id": "node-domexception@1.0.0",
+      "name": "node-domexception",
+      "version": "1.0.0",
+      "distribution": [
+        "external_server"
+      ],
+      "declared_license": "MIT",
+      "integrity": "sha512-/jKZoMpw0F8GRwl4/eLROPA3cfcXtLApP0QzLmUT/HuPCZWyB7IY9ZrMeKw2O/nFIqPQB3PVM9aYm0F312AXDQ==",
+      "notice_status": "packaged_original_notices",
+      "notices": [
+        {
+          "path": "LICENSE",
+          "sha256": "8ec1386f7f078b0c7cd25341cd80f332df902371cda9f40c10ec2b4007b420b7"
+        }
+      ]
+    },
+    {
+      "id": "node-fetch@3.3.2",
+      "name": "node-fetch",
+      "version": "3.3.2",
+      "distribution": [
+        "external_server"
+      ],
+      "declared_license": "MIT",
+      "integrity": "sha512-dRB78srN/l6gqWulah9SrxeYnxeddIG30+GOqK/9OlLVyLg3HPnr6SqOWTWOXKRwC2eGYCkZ59NNuSgvSrpgOA==",
+      "notice_status": "packaged_original_notices",
+      "notices": [
+        {
+          "path": "LICENSE.md",
+          "sha256": "3e2c11dcf3f17ab585baab8faba54772d7872f1c6e026022acd4b4006665efb0"
+        }
+      ]
+    },
+    {
+      "id": "object-hash@3.0.0",
+      "name": "object-hash",
+      "version": "3.0.0",
+      "distribution": [
+        "external_server"
+      ],
+      "declared_license": "MIT",
+      "integrity": "sha512-RSn9F68PjH9HqtltsSnqYC1XXoWe9Bju5+213R98cNGttag9q9yAOTzdbsqvIa7aNm5WffBZFpWYr2aWrklWAw==",
+      "notice_status": "packaged_original_notices",
+      "notices": [
+        {
+          "path": "LICENSE",
+          "sha256": "ea9e6806c48a8a043ad8f2446527dc860617068265cffbef3efa4aaba39f18d8"
+        }
+      ]
+    },
+    {
+      "id": "once@1.4.0",
+      "name": "once",
+      "version": "1.4.0",
+      "distribution": [
+        "external_server"
+      ],
+      "declared_license": "ISC",
+      "integrity": "sha512-lNaJgI+2Q5URQBkccEKHTQOPaXdUxnZZElQTZY0MFUAuaEqe1E+Nyvgdz/aIyNi6Z9MzO5dv1H8n58/GELp3+w==",
+      "notice_status": "packaged_original_notices",
+      "notices": [
+        {
+          "path": "LICENSE",
+          "sha256": "4ec3d4c66cd87f5c8d8ad911b10f99bf27cb00cdfcff82621956e379186b016b"
+        }
+      ]
+    },
+    {
+      "id": "package-json-from-dist@1.0.1",
+      "name": "package-json-from-dist",
+      "version": "1.0.1",
+      "distribution": [
+        "external_server"
+      ],
+      "declared_license": "BlueOak-1.0.0",
+      "integrity": "sha512-UEZIS3/by4OC8vL3P2dTXRETpebLI2NiI5vIrjaD/5UtrkFX/tNbwjTSRAGC/+7CAo2pIcBaRgWmcBBHcsaCIw==",
+      "notice_status": "packaged_original_notices",
+      "notices": [
+        {
+          "path": "LICENSE.md",
+          "sha256": "a49c9ba464796f65b59fca3f1e6ca40912df1e859f575383223f7ec6c5baae09"
+        }
+      ]
+    },
+    {
+      "id": "parse5@8.0.1",
+      "name": "parse5",
+      "version": "8.0.1",
+      "distribution": [
+        "external_server"
+      ],
+      "declared_license": "MIT",
+      "integrity": "sha512-z1e/HMG90obSGeidlli3hj7cbocou0/wa5HacvI3ASx34PecNjNQeaHNo5WIZpWofN9kgkqV1q5YvXe3F0FoPw==",
+      "notice_status": "packaged_original_notices",
+      "notices": [
+        {
+          "path": "LICENSE",
+          "sha256": "8c535800331e1e4439835555b3f9edc7fe9dee2fab0d8bbbd5a982e8b8343d4d"
+        }
+      ]
+    },
+    {
+      "id": "path-key@3.1.1",
+      "name": "path-key",
+      "version": "3.1.1",
+      "distribution": [
+        "external_server"
+      ],
+      "declared_license": "MIT",
+      "integrity": "sha512-ojmeN0qd+y0jszEtoY48r0Peq5dwMEkIlCOu6Q5f41lfkswXuKtYrhgoTpLnyIcHm24Uhqx+5Tqm2InSwLhE6Q==",
+      "notice_status": "packaged_original_notices",
+      "notices": [
+        {
+          "path": "license",
+          "sha256": "48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0"
+        }
+      ]
+    },
+    {
+      "id": "path-scurry@1.11.1",
+      "name": "path-scurry",
+      "version": "1.11.1",
+      "distribution": [
+        "external_server"
+      ],
+      "declared_license": "BlueOak-1.0.0",
+      "integrity": "sha512-Xa4Nw17FS9ApQFJ9umLiJS4orGjm7ZzwUrwamcGQuHSzDyth9boKDaycYdDcZDuqYATXw4HFXgaqWTctW/v1HA==",
+      "notice_status": "packaged_original_notices",
+      "notices": [
+        {
+          "path": "LICENSE.md",
+          "sha256": "8a1af140fdfbf5afd3df27f7e662f989c5b963a300020dfafce42033cae9e004"
+        }
+      ]
+    },
+    {
+      "id": "proto3-json-serializer@3.0.4",
+      "name": "proto3-json-serializer",
+      "version": "3.0.4",
+      "distribution": [
+        "external_server"
+      ],
+      "declared_license": "Apache-2.0",
+      "integrity": "sha512-E1sbAYg3aEbXrq0n1ojJkRHQJGE1kaE/O6GLA94y8rnJBfgvOPTOd1b9hOceQK1FFZI9qMh1vBERCyO2ifubcw==",
+      "notice_status": "packaged_original_notices",
+      "notices": [
+        {
+          "path": "LICENSE",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+        }
+      ]
+    },
+    {
+      "id": "proto3-json-serializer@4.1.0",
+      "name": "proto3-json-serializer",
+      "version": "4.1.0",
+      "distribution": [
+        "external_server"
+      ],
+      "declared_license": "Apache-2.0",
+      "integrity": "sha512-Z0Blk2BTZTPp9ZXOWnRG/P3bkEs53FtMv59sl4xU44xcDdYhKlVO/AqAHTYXAlW9HdislqQxjSornP3457wkag==",
+      "notice_status": "packaged_original_notices",
+      "notices": [
+        {
+          "path": "LICENSE",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+        }
+      ]
+    },
+    {
+      "id": "protobufjs@7.6.6",
+      "name": "protobufjs",
+      "version": "7.6.6",
+      "distribution": [
+        "external_server"
+      ],
+      "declared_license": "BSD-3-Clause",
+      "integrity": "sha512-dYDWdjSl5RNb7SgPxGQcRU+GtvP7s2fpkrY0r432PcOIaZ0/rBcxEZnQN67iJhFuQiVw754JDoPruPCNdGsbjg==",
+      "notice_status": "packaged_original_notices",
+      "notices": [
+        {
+          "path": "LICENSE",
+          "sha256": "49d6a1c9a623784c61c6cb70f773f3457faceb1914a13c8560a9823b7631950c"
+        },
+        {
+          "path": "google/LICENSE",
+          "sha256": "4ab87e6e3c0c0b78e47c77d49ec10c048f8a519fb8062e6e3217e3e6e9b0c6e9"
+        }
+      ]
+    },
+    {
+      "id": "react-dom@19.3.1",
+      "name": "react-dom",
+      "version": "19.3.1",
+      "distribution": [
+        "bundled_client"
+      ],
+      "declared_license": "MIT",
+      "integrity": "sha512-Y0bARz53lhEC1NMCASs0/j+faB/zqt3R8hpvg1e8+61ZVJ4UL0UdC4cBbXfZMcIuhrfgeILTLe+ZeBCavQPtKQ==",
+      "notice_status": "packaged_original_notices",
+      "notices": [
+        {
+          "path": "LICENSE",
+          "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+        }
+      ]
+    },
+    {
+      "id": "react@19.3.1",
+      "name": "react",
+      "version": "19.3.1",
+      "distribution": [
+        "bundled_client"
+      ],
+      "declared_license": "MIT",
+      "integrity": "sha512-QNhWdt7nrgVWWQG58QuGsAR3jv3Hbe4mb4vz7w2csnHavciZJgda1CPNaldF6eVxv90ud3jUXpKlHL69gO38yw==",
+      "notice_status": "packaged_original_notices",
+      "notices": [
+        {
+          "path": "LICENSE",
+          "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+        }
+      ]
+    },
+    {
+      "id": "readable-stream@3.6.2",
+      "name": "readable-stream",
+      "version": "3.6.2",
+      "distribution": [
+        "external_server"
+      ],
+      "declared_license": "MIT",
+      "integrity": "sha512-9u/sniCrY3D5WdsERHzHE4G2YCXqoG5FTHUiCC4SIbr6XcLZBY05ya9EKjYek9O5xOAwjGq+1JdGBAS7Q9ScoA==",
+      "notice_status": "packaged_original_notices",
+      "notices": [
+        {
+          "path": "LICENSE",
+          "sha256": "ec62dc96da0099b87f4511736c87309335527fb7031639493e06c95728dc8c54"
+        }
+      ]
+    },
+    {
+      "id": "require-directory@2.1.1",
+      "name": "require-directory",
+      "version": "2.1.1",
+      "distribution": [
+        "external_server"
+      ],
+      "declared_license": "MIT",
+      "integrity": "sha512-fGxEI7+wsG9xrvdjsrlmL22OMTTiHRwAMroiEeMgq8gzoLC/PQr7RsRDSTLUg/bZAZtF+TVIkHc6/4RIKrui+Q==",
+      "notice_status": "packaged_original_notices",
+      "notices": [
+        {
+          "path": "LICENSE",
+          "sha256": "a92e52eb1fa7cd746e3827bf01d3a3589bbc8e1e51348b1da042aad165525ad1"
+        }
+      ]
+    },
+    {
+      "id": "retry-request@8.0.4",
+      "name": "retry-request",
+      "version": "8.0.4",
+      "distribution": [
+        "external_server"
+      ],
+      "declared_license": "MIT",
+      "integrity": "sha512-pI6/7eabUYkZxamkOq0g0uMxKLLGnjzhefY+vL8bVXag5rto4OU2YBTPytWLuHH7aEKD6fn7kJycQfid0Mwnkw==",
+      "notice_status": "packaged_original_notices",
+      "notices": [
+        {
+          "path": "license",
+          "sha256": "e0845fe275271e0b752360e09e5774b1b05d5e1c73bbbc3d4bf8b57d8af98217"
+        }
+      ]
+    },
+    {
+      "id": "retry-request@9.1.0",
+      "name": "retry-request",
+      "version": "9.1.0",
+      "distribution": [
+        "external_server"
+      ],
+      "declared_license": "MIT",
+      "integrity": "sha512-FILyVbis+DTo3KRbtKceqpj1595wIF+XQFW/+AVOBdCQmxwNDgcNXXr2FNM0Ej2qD7zVXbJGfH7lo4jB0wwhKA==",
+      "notice_status": "packaged_original_notices",
+      "notices": [
+        {
+          "path": "license",
+          "sha256": "e0845fe275271e0b752360e09e5774b1b05d5e1c73bbbc3d4bf8b57d8af98217"
+        }
+      ]
+    },
+    {
+      "id": "rimraf@5.0.10",
+      "name": "rimraf",
+      "version": "5.0.10",
+      "distribution": [
+        "external_server"
+      ],
+      "declared_license": "ISC",
+      "integrity": "sha512-l0OE8wL34P4nJH/H2ffoaniAokM2qSmrtXHmlpvYr5AVVX8msAyW0l8NVJFDxlSK4u3Uh/f41cQheDVdnYijwQ==",
+      "notice_status": "packaged_original_notices",
+      "notices": [
+        {
+          "path": "LICENSE",
+          "sha256": "d11323827fa4edeaafc437cc5b91b6971b335f0127efeeb42bf5122fe8657e8f"
+        }
+      ]
+    },
+    {
+      "id": "safe-buffer@5.2.1",
+      "name": "safe-buffer",
+      "version": "5.2.1",
+      "distribution": [
+        "external_server"
+      ],
+      "declared_license": "MIT",
+      "integrity": "sha512-rp3So07KcdmmKbGvgaNxQSJr7bGVSVk5S9Eq1F+ppbRo70+YeaDxkw5Dd8NPN+GD6bjnYm2VuPuCXmpuYvmCXQ==",
+      "notice_status": "packaged_original_notices",
+      "notices": [
+        {
+          "path": "LICENSE",
+          "sha256": "c7cc929b57080f4b9d0c6cf57669f0463fc5b39906344dfc8d3bc43426b30eac"
+        }
+      ]
+    },
+    {
+      "id": "scheduler@0.28.0",
+      "name": "scheduler",
+      "version": "0.28.0",
+      "distribution": [
+        "bundled_client"
+      ],
+      "declared_license": "MIT",
+      "integrity": "sha512-juorfCmIkIw8tT+p5BXSm6PJjQF/ycEYmKyzURCIt/RaZIhL+PulbQ9Yu2z1HdOJDdqDTlxA1+xKBmHXJsczAw==",
+      "notice_status": "packaged_original_notices",
+      "notices": [
+        {
+          "path": "LICENSE",
+          "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+        }
+      ]
+    },
+    {
+      "id": "shebang-command@2.0.0",
+      "name": "shebang-command",
+      "version": "2.0.0",
+      "distribution": [
+        "external_server"
+      ],
+      "declared_license": "MIT",
+      "integrity": "sha512-kHxr2zZpYtdmrN1qDjrrX/Z1rR1kG8Dx+gkpK1G4eXmvXswmcE1hTWBWYUzlraYw1/yZp6YuDY77YtvbN0dmDA==",
+      "notice_status": "packaged_original_notices",
+      "notices": [
+        {
+          "path": "license",
+          "sha256": "69dee148a2cc470554dfa7142e830662062394d0fe67cddd379aba90dc60d6b3"
+        }
+      ]
+    },
+    {
+      "id": "shebang-regex@3.0.0",
+      "name": "shebang-regex",
+      "version": "3.0.0",
+      "distribution": [
+        "external_server"
+      ],
+      "declared_license": "MIT",
+      "integrity": "sha512-7++dFhtcx3353uBaq8DDR4NuxBetBzC7ZQOhmTQInHEd6bSrXdiEyzCvG07Z44UYdLShWUyXt5M/yhz8ekcb1A==",
+      "notice_status": "packaged_original_notices",
+      "notices": [
+        {
+          "path": "license",
+          "sha256": "48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0"
+        }
+      ]
+    },
+    {
+      "id": "signal-exit@4.1.0",
+      "name": "signal-exit",
+      "version": "4.1.0",
+      "distribution": [
+        "external_server"
+      ],
+      "declared_license": "ISC",
+      "integrity": "sha512-bzyZ1e88w9O1iNJbKnOlvYTrWPDl46O1bG0D3XInv+9tkPrxrN8jUUTiFlDkkmKWgn1M6CfIA13SuGqOa9Korw==",
+      "notice_status": "packaged_original_notices",
+      "notices": [
+        {
+          "path": "LICENSE.txt",
+          "sha256": "b173e19b9a78df305577ace0e52ef45a4bcc915ea28b47b256dc3b68dcb1f7e7"
+        }
+      ]
+    },
+    {
+      "id": "stream-events@1.0.5",
+      "name": "stream-events",
+      "version": "1.0.5",
+      "distribution": [
+        "external_server"
+      ],
+      "declared_license": "MIT",
+      "integrity": "sha512-E1GUzBSgvct8Jsb3v2X15pjzN1tYebtbLaMg+eBOUOAxgbLoSbT2NS91ckc5lJD1KfLjId+jXJRgo0qnV5Nerg==",
+      "notice_status": "upstream_verified_notice",
+      "notices": [
+        {
+          "path": "upstream/stream-events-1.0.5-MIT.txt",
+          "sha256": "2055fb6b0da08d07d70811043d7b8682ebbdba1e206f1ee511646ccb3f8f450d"
+        }
+      ],
+      "publication_provenance": {
+        "license": "MIT",
+        "status": "upstream_verified_notice",
+        "registry": "https://registry.npmjs.org/stream-events/1.0.5",
+        "gitHead": "b53b9533cbccbad8dd50633ab95b6f3fe4e6258e",
+        "tree": "https://api.github.com/repos/stephenplusplus/stream-events/git/trees/b53b9533cbccbad8dd50633ab95b6f3fe4e6258e",
+        "packaged_original_notice_present": false,
+        "notice": "stream-events-1.0.5-MIT.txt",
+        "notice_commit": "5cd27e04319f81836fb8018df36f5c09534194ab",
+        "noticeUrl": "https://raw.githubusercontent.com/stephenplusplus/stream-events/5cd27e04319f81836fb8018df36f5c09534194ab/LICENSE",
+        "sha256": "2055fb6b0da08d07d70811043d7b8682ebbdba1e206f1ee511646ccb3f8f450d",
+        "applicability": {
+          "basis": "immediate_notice_only_successor",
+          "compare_url": "https://github.com/stephenplusplus/stream-events/compare/b53b9533cbccbad8dd50633ab95b6f3fe4e6258e...5cd27e04319f81836fb8018df36f5c09534194ab",
+          "changed_files": [
+            "LICENSE"
+          ],
+          "manifest_version": "1.0.5",
+          "note": "The immediate successor adds only the corresponding notice; manifest version and installed index.js/index.d.ts source match the publication commit. The notice was not packaged in the historical tarball."
+        }
+      }
+    },
+    {
+      "id": "stream-shift@1.0.3",
+      "name": "stream-shift",
+      "version": "1.0.3",
+      "distribution": [
+        "external_server"
+      ],
+      "declared_license": "MIT",
+      "integrity": "sha512-76ORR0DO1o1hlKwTbi/DM3EXWGf3ZJYO8cXX5RJwnul2DEg2oyoZyjLNoQM8WsvZiFKCRfC1O0J7iCvie3RZmQ==",
+      "notice_status": "packaged_original_notices",
+      "notices": [
+        {
+          "path": "LICENSE",
+          "sha256": "6a134e51aa31496c15a741592fc5d782b2dbf8d8b6b8524e15c8520ae0cd6374"
+        }
+      ]
+    },
+    {
+      "id": "string-width@4.2.3",
+      "name": "string-width",
+      "version": "4.2.3",
+      "distribution": [
+        "external_server"
+      ],
+      "declared_license": "MIT",
+      "integrity": "sha512-wKyQRQpjJ0sIp62ErSZdGsjMJWsap5oRNihHhu6G7JVO/9jIB6UyevL+tXuOqrng8j/cxKTWyWUwvSTriiZz/g==",
+      "notice_status": "packaged_original_notices",
+      "notices": [
+        {
+          "path": "license",
+          "sha256": "48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0"
+        }
+      ]
+    },
+    {
+      "id": "string-width@5.1.2",
+      "name": "string-width",
+      "version": "5.1.2",
+      "distribution": [
+        "external_server"
+      ],
+      "declared_license": "MIT",
+      "integrity": "sha512-HnLOCR3vjcY8beoNLtcjZ5/nxn2afmME6lhrDrebokqMap+XbeW8n9TXpPDOqdGK5qcI3oT0GKTW6wC7EMiVqA==",
+      "notice_status": "packaged_original_notices",
+      "notices": [
+        {
+          "path": "license",
+          "sha256": "5c932d88256b4ab958f64a856fa48e8bd1f55bc1d96b8149c65689e0c61789d3"
+        }
+      ]
+    },
+    {
+      "id": "string_decoder@1.3.0",
+      "name": "string_decoder",
+      "version": "1.3.0",
+      "distribution": [
+        "external_server"
+      ],
+      "declared_license": "MIT",
+      "integrity": "sha512-hkRX8U1WjJFd8LsDJ2yQ/wWWxaopEsABU1XfkM8A+j0+85JAGppt16cr1Whg6KIbb4okU6Mql6BOj+uup/wKeA==",
+      "notice_status": "packaged_original_notices",
+      "notices": [
+        {
+          "path": "LICENSE",
+          "sha256": "11f2aafb37d06b3ee5bdaf06e9811141d0da05263c316f3d627f45c20d43261b"
+        }
+      ]
+    },
+    {
+      "id": "strip-ansi@6.0.1",
+      "name": "strip-ansi",
+      "version": "6.0.1",
+      "distribution": [
+        "external_server"
+      ],
+      "declared_license": "MIT",
+      "integrity": "sha512-Y38VPSHcqkFrCpFnQ9vuSXmquuv5oXOKpGeT6aGrr3o3Gc9AlVa6JBfUSOCnbxGGZF+/0ooI7KrPuUSztUdU5A==",
+      "notice_status": "packaged_original_notices",
+      "notices": [
+        {
+          "path": "license",
+          "sha256": "48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0"
+        }
+      ]
+    },
+    {
+      "id": "strip-ansi@7.2.0",
+      "name": "strip-ansi",
+      "version": "7.2.0",
+      "distribution": [
+        "external_server"
+      ],
+      "declared_license": "MIT",
+      "integrity": "sha512-yDPMNjp4WyfYBkHnjIRLfca1i6KMyGCtsVgoKe/z1+6vukgaENdgGBZt+ZmKPc4gavvEZ5OgHfHdrazhgNyG7w==",
+      "notice_status": "packaged_original_notices",
+      "notices": [
+        {
+          "path": "license",
+          "sha256": "5c932d88256b4ab958f64a856fa48e8bd1f55bc1d96b8149c65689e0c61789d3"
+        }
+      ]
+    },
+    {
+      "id": "stubs@3.0.0",
+      "name": "stubs",
+      "version": "3.0.0",
+      "distribution": [
+        "external_server"
+      ],
+      "declared_license": "MIT",
+      "integrity": "sha512-PdHt7hHUJKxvTCgbKX9C1V/ftOcjJQgz8BZwNfV5c4B6dcGqlpelTbJ999jBGZ2jYiPAwcX5dP6oBwVlBlUbxw==",
+      "notice_status": "upstream_verified_notice",
+      "notices": [
+        {
+          "path": "upstream/stubs-3.0.0-MIT.txt",
+          "sha256": "cd01ce0baa2b903bb80911719424904a4a0eb589acb982d45b119dffe28b7f58"
+        }
+      ],
+      "publication_provenance": {
+        "license": "MIT",
+        "status": "upstream_verified_notice",
+        "registry": "https://registry.npmjs.org/stubs/3.0.0",
+        "gitHead": "2d41d3ae487d3bb0b8c7511d254783eaad862d8f",
+        "tree": "https://api.github.com/repos/stephenplusplus/stubs/git/trees/2d41d3ae487d3bb0b8c7511d254783eaad862d8f",
+        "packaged_original_notice_present": false,
+        "notice": "stubs-3.0.0-MIT.txt",
+        "notice_commit": "9f93d33b800f61a2c00f1582dc0f8cc14242219a",
+        "noticeUrl": "https://raw.githubusercontent.com/stephenplusplus/stubs/9f93d33b800f61a2c00f1582dc0f8cc14242219a/LICENSE",
+        "sha256": "cd01ce0baa2b903bb80911719424904a4a0eb589acb982d45b119dffe28b7f58",
+        "applicability": {
+          "basis": "immediate_notice_only_successor",
+          "compare_url": "https://github.com/stephenplusplus/stubs/compare/2d41d3ae487d3bb0b8c7511d254783eaad862d8f...9f93d33b800f61a2c00f1582dc0f8cc14242219a",
+          "changed_files": [
+            "LICENSE"
+          ],
+          "manifest_version": "3.0.0",
+          "note": "The immediate successor adds only the corresponding notice; manifest version and installed index.js/test.js source match the publication commit. The notice was not packaged in the historical tarball."
+        }
+      }
+    },
+    {
+      "id": "teeny-request@10.1.4",
+      "name": "teeny-request",
+      "version": "10.1.4",
+      "distribution": [
+        "external_server"
+      ],
+      "declared_license": "Apache-2.0",
+      "integrity": "sha512-R1Cg4Vu0UULeDfHL/kjABLaTW++9yD/B6n2g48y5dJ04hsEaxcfmAqbNDzNsbqAYJyIpZafjklLG9YxRu9uzOg==",
+      "notice_status": "packaged_original_notices",
+      "notices": [
+        {
+          "path": "LICENSE",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+        }
+      ]
+    },
+    {
+      "id": "undici-types@8.9.0",
+      "name": "undici-types",
+      "version": "8.9.0",
+      "distribution": [
+        "external_server"
+      ],
+      "declared_license": "MIT",
+      "integrity": "sha512-KTDyRTYX8sWmKXAikPHHSyc63CRPETMctyjKFupcC6OBLXT3xsN0e9aF7m+mIXutFWpUXuedtowG7iLOzp0kQg==",
+      "notice_status": "packaged_original_notices",
+      "notices": [
+        {
+          "path": "LICENSE",
+          "sha256": "a6db8096b2707bc0102d256917d4d33f298ba36d8c3f25de067a2b5bb379db27"
+        }
+      ]
+    },
+    {
+      "id": "util-deprecate@1.0.2",
+      "name": "util-deprecate",
+      "version": "1.0.2",
+      "distribution": [
+        "external_server"
+      ],
+      "declared_license": "MIT",
+      "integrity": "sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==",
+      "notice_status": "packaged_original_notices",
+      "notices": [
+        {
+          "path": "LICENSE",
+          "sha256": "0154425673db15cdfa80ecba2c9b1f1a867f7197a006764712849bfc3a93cbb7"
+        }
+      ]
+    },
+    {
+      "id": "web-streams-polyfill@3.3.3",
+      "name": "web-streams-polyfill",
+      "version": "3.3.3",
+      "distribution": [
+        "external_server"
+      ],
+      "declared_license": "MIT",
+      "integrity": "sha512-d2JWLCivmZYTSIoge9MsgFCZrt571BikcWGYkjC1khllbTeDlGqZ2D8vD8E/lJa8WGWbb7Plm8/XJYV7IJHZZw==",
+      "notice_status": "packaged_original_notices",
+      "notices": [
+        {
+          "path": "LICENSE",
+          "sha256": "81008a3fb78f69f3c4a72a9e005c8582342ab62864371b3ab8e1b6af9041e080"
+        }
+      ]
+    },
+    {
+      "id": "which@2.0.2",
+      "name": "which",
+      "version": "2.0.2",
+      "distribution": [
+        "external_server"
+      ],
+      "declared_license": "ISC",
+      "integrity": "sha512-BLI3Tl1TW3Pvl70l3yq3Y64i+awpwXqsGBYWkkqMtnbXgrMD+yj7rhW0kuEDxzJaYXGjEW5ogapKNMEKNMjibA==",
+      "notice_status": "packaged_original_notices",
+      "notices": [
+        {
+          "path": "LICENSE",
+          "sha256": "4ec3d4c66cd87f5c8d8ad911b10f99bf27cb00cdfcff82621956e379186b016b"
+        }
+      ]
+    },
+    {
+      "id": "wrap-ansi@7.0.0",
+      "name": "wrap-ansi",
+      "version": "7.0.0",
+      "distribution": [
+        "external_server"
+      ],
+      "declared_license": "MIT",
+      "integrity": "sha512-YVGIj2kamLSTxw6NsZjoBxfSwsn0ycdesmc4p+Q21c5zPuZ1pl+NfxVdxPtdHvmNVOQ6XSYG4AUtyt/Fi7D16Q==",
+      "notice_status": "packaged_original_notices",
+      "notices": [
+        {
+          "path": "license",
+          "sha256": "5c932d88256b4ab958f64a856fa48e8bd1f55bc1d96b8149c65689e0c61789d3"
+        }
+      ]
+    },
+    {
+      "id": "wrap-ansi@8.1.0",
+      "name": "wrap-ansi",
+      "version": "8.1.0",
+      "distribution": [
+        "external_server"
+      ],
+      "declared_license": "MIT",
+      "integrity": "sha512-si7QWI6zUMq56bESFvagtmzMdGOtoxfR+Sez11Mobfc7tm+VkUckk9bW2UeffTGVUbOksxmSw0AA2gs8g71NCQ==",
+      "notice_status": "packaged_original_notices",
+      "notices": [
+        {
+          "path": "license",
+          "sha256": "5c932d88256b4ab958f64a856fa48e8bd1f55bc1d96b8149c65689e0c61789d3"
+        }
+      ]
+    },
+    {
+      "id": "wrappy@1.0.2",
+      "name": "wrappy",
+      "version": "1.0.2",
+      "distribution": [
+        "external_server"
+      ],
+      "declared_license": "ISC",
+      "integrity": "sha512-l4Sp/DRseor9wL6EvV2+TuQn63dMkPjZ/sp9XkghTEbV9KlPS1xUsZ3u7/IQO4wxtcFB4bgpQPRcR3QCvezPcQ==",
+      "notice_status": "packaged_original_notices",
+      "notices": [
+        {
+          "path": "LICENSE",
+          "sha256": "4ec3d4c66cd87f5c8d8ad911b10f99bf27cb00cdfcff82621956e379186b016b"
+        }
+      ]
+    },
+    {
+      "id": "ws@8.22.0",
+      "name": "ws",
+      "version": "8.22.0",
+      "distribution": [
+        "external_server"
+      ],
+      "declared_license": "MIT",
+      "integrity": "sha512-Ydggc987+RO0AnWtZ/7Wq9FtNvcrL1b/RO0ud9mWjUPgDrsAAwQSF51sm2hm1XofbU/4jkpGEsLFsZZxU+1DOg==",
+      "notice_status": "packaged_original_notices",
+      "notices": [
+        {
+          "path": "LICENSE",
+          "sha256": "2b29dcfe0d6471f7e8c92c5fb38c9f93edee10330937055440192f1832b1ecef"
+        }
+      ]
+    },
+    {
+      "id": "y18n@5.0.8",
+      "name": "y18n",
+      "version": "5.0.8",
+      "distribution": [
+        "external_server"
+      ],
+      "declared_license": "ISC",
+      "integrity": "sha512-0pfFzegeDWJHJIAmTLRP2DwHjdF5s7jo9tuztdQxAhINCdvS+3nGINqPd00AphqJR/0LhANUS6/+7SCb98YOfA==",
+      "notice_status": "packaged_original_notices",
+      "notices": [
+        {
+          "path": "LICENSE",
+          "sha256": "2034cce3b6fafcddd642c4175e01d3ddfc332a53b9f20fdc46b1466dc89ac469"
+        }
+      ]
+    },
+    {
+      "id": "yargs-parser@21.1.1",
+      "name": "yargs-parser",
+      "version": "21.1.1",
+      "distribution": [
+        "external_server"
+      ],
+      "declared_license": "ISC",
+      "integrity": "sha512-tVpsJW7DdjecAiFpbIB1e3qxIQsE6NoPc5/eTdrbbIC4h0LVsWhnoa3g+m2HclBIujHzsxZ4VJVA+GUuc2/LBw==",
+      "notice_status": "packaged_original_notices",
+      "notices": [
+        {
+          "path": "LICENSE.txt",
+          "sha256": "365496ca1f56da40b23c9815fc40fa9005847b2f8f8fd1c1a4929ef25ec8cd1d"
+        }
+      ]
+    },
+    {
+      "id": "yargs@17.7.3",
+      "name": "yargs",
+      "version": "17.7.3",
+      "distribution": [
+        "external_server"
+      ],
+      "declared_license": "MIT",
+      "integrity": "sha512-GZtjxm/J/4TSxuL3FNYjCmLktBTnIw/rVmKSIyKeYAZpmJB2ig9VauCC5xsa82GNKVKDAqpOn3KVzNt0zmrU0g==",
+      "notice_status": "packaged_original_notices",
+      "notices": [
+        {
+          "path": "LICENSE",
+          "sha256": "2f1a503bfab84b3ba7393627308b3274501e459e3b5185bbb56bbf16cb1602d4"
+        }
+      ]
+    }
+  ]
+}

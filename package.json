@@ -1,0 +1,50 @@
+{
+  "name": "wintr",
+  "version": "0.1.0",
+  "private": true,
+  "license": "MIT",
+  "type": "module",
+  "packageManager": "pnpm@11.25.0",
+  "engines": {
+    "node": ">=24.19.0 <25",
+    "pnpm": "11.25.0"
+  },
+  "scripts": {
+    "dev": "tsx src/server/index.ts --dev",
+    "dev:synthetic": "tsx src/server/index.ts --dev --mode=synthetic",
+    "build": "node scripts/software-notices.mjs --check && vite build && tsc -p tsconfig.server.json",
+    "build:windows": "node scripts/build-windows-host.mjs",
+    "licenses:generate": "node scripts/font-notices.mjs && node scripts/software-notices.mjs",
+    "licenses:check": "node scripts/software-notices.mjs --check",
+    "start": "node dist/server/server/index.js",
+    "start:synthetic": "node dist/server/server/index.js --mode=synthetic",
+    "typecheck": "tsc -p tsconfig.json --noEmit && tsc -p tsconfig.server.json --noEmit",
+    "test": "vitest run",
+    "test:core": "vitest run --maxWorkers=2 --exclude tests/music-capture.test.ts --exclude tests/recording.test.ts --exclude tests/recording-ui.test.tsx --exclude tests/recording-client.test.ts",
+    "test:emulator": "node scripts/run-firestore-emulator-tests.mjs",
+    "typecheck:emulator": "tsc -p tsconfig.emulator.json --noEmit",
+    "start:hosted": "node dist/server/server/hosted-entry.js"
+  },
+  "dependencies": {
+    "@fontsource/inter": "^5.3.0",
+    "@fontsource/space-grotesk": "5.3.0",
+    "@google-cloud/firestore": "9.3.1",
+    "google-auth-library": "11.3.1",
+    "parse5": "8.0.1",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "ws": "8.22.0"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.5",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@types/ws": "8.18.2",
+    "@vitejs/plugin-react": "^6.1.2",
+    "jsdom": "30.1.3",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.5",
+    "vitest": "^5.0.5"
+  }
+}

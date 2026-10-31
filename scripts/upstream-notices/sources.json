@@ -1,0 +1,79 @@
+{
+  "@google-cloud/firestore-api@0.2.0": {
+    "license": "Apache-2.0",
+    "status": "upstream_verified_notice",
+    "registry": "https://registry.npmjs.org/@google-cloud%2Ffirestore-api/0.2.0",
+    "gitHead": "ecfaf4ccee609ccb44e8cfc28fbab2fdf20fa8d8",
+    "manifest": "https://raw.githubusercontent.com/googleapis/google-cloud-node/ecfaf4ccee609ccb44e8cfc28fbab2fdf20fa8d8/packages/google-cloud-firestore-api/package.json",
+    "notice": "google-cloud-node-Apache-2.0.txt",
+    "noticeUrl": "https://raw.githubusercontent.com/googleapis/google-cloud-node/ecfaf4ccee609ccb44e8cfc28fbab2fdf20fa8d8/LICENSE",
+    "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+  },
+  "eastasianwidth@0.2.0": {
+    "license": "MIT",
+    "status": "upstream_verified_notice",
+    "registry": "https://registry.npmjs.org/eastasianwidth/0.2.0",
+    "gitHead": "b89f04d44dc786885615e94cd6e2ba1ef7866fa4",
+    "tree": "https://api.github.com/repos/komagata/eastasianwidth/git/trees/b89f04d44dc786885615e94cd6e2ba1ef7866fa4?recursive=1",
+    "packaged_original_notice_present": false,
+    "notice": "eastasianwidth-0.2.0-MIT.txt",
+    "notice_commit": "1d41951a59d63fb2d77cda021050fc070cae424a",
+    "noticeUrl": "https://raw.githubusercontent.com/komagata/eastasianwidth/1d41951a59d63fb2d77cda021050fc070cae424a/MIT-LICENSE.txt",
+    "sha256": "94aa6016fb9d436508366433e9caba061443ca58f4c7eb515caec7badf90ae5a",
+    "applicability": {
+      "basis": "explicit_maintainer_version_clarification",
+      "clarification_commit": "f42b1e7b2a403d2050dda1141211b4e198e50e70",
+      "clarification_url": "https://raw.githubusercontent.com/komagata/eastasianwidth/f42b1e7b2a403d2050dda1141211b4e198e50e70/LICENSE-NOTES.md",
+      "clarification_sha256": "652d0486b433ecd1e91c2a933f6d320f651bda1d7bb32ba50a48cf7329bb81b3",
+      "note": "The notice was added during version 0.3.0; the pinned maintainer clarification explicitly assigns it to historical 0.2.0. The copyright line has no year. This is not a publication-commit notice or a claim that the 0.3.0 source is identical."
+    }
+  },
+  "google-gax@5.0.8": {
+    "license": "Apache-2.0",
+    "status": "upstream_verified_notice",
+    "registry": "https://registry.npmjs.org/google-gax/5.0.8",
+    "gitHead": "6b9fd1af346a20479615704d40435f6ae0ecfba6",
+    "manifest": "https://raw.githubusercontent.com/googleapis/google-cloud-node/6b9fd1af346a20479615704d40435f6ae0ecfba6/core/packages/gax/package.json",
+    "notice": "google-cloud-node-Apache-2.0.txt",
+    "noticeUrl": "https://raw.githubusercontent.com/googleapis/google-cloud-node/6b9fd1af346a20479615704d40435f6ae0ecfba6/LICENSE",
+    "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+  },
+  "stream-events@1.0.5": {
+    "license": "MIT",
+    "status": "upstream_verified_notice",
+    "registry": "https://registry.npmjs.org/stream-events/1.0.5",
+    "gitHead": "b53b9533cbccbad8dd50633ab95b6f3fe4e6258e",
+    "tree": "https://api.github.com/repos/stephenplusplus/stream-events/git/trees/b53b9533cbccbad8dd50633ab95b6f3fe4e6258e",
+    "packaged_original_notice_present": false,
+    "notice": "stream-events-1.0.5-MIT.txt",
+    "notice_commit": "5cd27e04319f81836fb8018df36f5c09534194ab",
+    "noticeUrl": "https://raw.githubusercontent.com/stephenplusplus/stream-events/5cd27e04319f81836fb8018df36f5c09534194ab/LICENSE",
+    "sha256": "2055fb6b0da08d07d70811043d7b8682ebbdba1e206f1ee511646ccb3f8f450d",
+    "applicability": {
+      "basis": "immediate_notice_only_successor",
+      "compare_url": "https://github.com/stephenplusplus/stream-events/compare/b53b9533cbccbad8dd50633ab95b6f3fe4e6258e...5cd27e04319f81836fb8018df36f5c09534194ab",
+      "changed_files": ["LICENSE"],
+      "manifest_version": "1.0.5",
+      "note": "The immediate successor adds only the corresponding notice; manifest version and installed index.js/index.d.ts source match the publication commit. The notice was not packaged in the historical tarball."
+    }
+  },
+  "stubs@3.0.0": {
+    "license": "MIT",
+    "status": "upstream_verified_notice",
+    "registry": "https://registry.npmjs.org/stubs/3.0.0",
+    "gitHead": "2d41d3ae487d3bb0b8c7511d254783eaad862d8f",
+    "tree": "https://api.github.com/repos/stephenplusplus/stubs/git/trees/2d41d3ae487d3bb0b8c7511d254783eaad862d8f",
+    "packaged_original_notice_present": false,
+    "notice": "stubs-3.0.0-MIT.txt",
+    "notice_commit": "9f93d33b800f61a2c00f1582dc0f8cc14242219a",
+    "noticeUrl": "https://raw.githubusercontent.com/stephenplusplus/stubs/9f93d33b800f61a2c00f1582dc0f8cc14242219a/LICENSE",
+    "sha256": "cd01ce0baa2b903bb80911719424904a4a0eb589acb982d45b119dffe28b7f58",
+    "applicability": {
+      "basis": "immediate_notice_only_successor",
+      "compare_url": "https://github.com/stephenplusplus/stubs/compare/2d41d3ae487d3bb0b8c7511d254783eaad862d8f...9f93d33b800f61a2c00f1582dc0f8cc14242219a",
+      "changed_files": ["LICENSE"],
+      "manifest_version": "3.0.0",
+      "note": "The immediate successor adds only the corresponding notice; manifest version and installed index.js/test.js source match the publication commit. The notice was not packaged in the historical tarball."
+    }
+  }
+}

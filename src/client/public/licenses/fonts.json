@@ -1,0 +1,311 @@
+{
+  "about": "Self-hosted fonts shipped with Wintr. Each notice file is the packaged SIL Open Font License 1.1 text and copyright notice, copied verbatim. The MIT licence covers Wintr original code only.",
+  "fonts": [
+    {
+      "family": "Inter",
+      "package": "@fontsource/inter",
+      "version": "5.3.0",
+      "license": "OFL-1.1",
+      "integrity": "sha512-RofMylZmjlJEfELXeNHFWBRcSs75rGU/6bV2S2jfnvv/3rPXPGe0LgUJTklcHZ9lM4OZmAVFhcJPnACfb91A3g==",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/fontsource/font-files.git",
+        "directory": "fonts/google/inter"
+      },
+      "notice": {
+        "path": "Inter-OFL.txt",
+        "source": "node_modules/@fontsource/inter/LICENSE",
+        "sha256": "3b0a5fca3d17942cde889069889dedbbbd075e9b599968c82a95f4d944e9b345"
+      },
+      "imports": [
+        "400.css",
+        "500.css",
+        "600.css",
+        "700.css",
+        "800.css"
+      ],
+      "files": [
+        {
+          "path": "node_modules/@fontsource/inter/files/inter-cyrillic-400-normal.woff",
+          "sha256": "6e441a6c94788318fa02b6d0a633aa29eebe27b69c6567eb1e59b4edc68ed70e"
+        },
+        {
+          "path": "node_modules/@fontsource/inter/files/inter-cyrillic-400-normal.woff2",
+          "sha256": "f0bb586459ce8f09b238285040f17e3e9e9538b2c5a7aae0775194e33c36c3c3"
+        },
+        {
+          "path": "node_modules/@fontsource/inter/files/inter-cyrillic-500-normal.woff",
+          "sha256": "5be18e0345781cb882a267798518553c0e915174fc70731ab5f085ca64ba1ebc"
+        },
+        {
+          "path": "node_modules/@fontsource/inter/files/inter-cyrillic-500-normal.woff2",
+          "sha256": "b77a86ec16aadc157f4a99e8898d71cd75ea264753d9bdf13f962f8c3988cbb0"
+        },
+        {
+          "path": "node_modules/@fontsource/inter/files/inter-cyrillic-600-normal.woff",
+          "sha256": "cc190ed1b64eb650a4ad7e97c7a668cb8b34acd9c4c7f7bf4372c0cbacd35795"
+        },
+        {
+          "path": "node_modules/@fontsource/inter/files/inter-cyrillic-600-normal.woff2",
+          "sha256": "6c2a37f82a676bcd441b735e4e2cda4edb8873a059ab9c362a84f0711f257041"
+        },
+        {
+          "path": "node_modules/@fontsource/inter/files/inter-cyrillic-700-normal.woff",
+          "sha256": "72b6daa49173e531027d8a260ef128e142a165811cab6a2875eefe0c3c58fa0e"
+        },
+        {
+          "path": "node_modules/@fontsource/inter/files/inter-cyrillic-700-normal.woff2",
+          "sha256": "5917871d3cc970d8ce195101cbf65c1f68ec948022eb6070030342bb7edfb3bb"
+        },
+        {
+          "path": "node_modules/@fontsource/inter/files/inter-cyrillic-800-normal.woff",
+          "sha256": "5d3dc126873486c5a8449a14823c613de707c7ee8b1df23a9e34e76116167627"
+        },
+        {
+          "path": "node_modules/@fontsource/inter/files/inter-cyrillic-800-normal.woff2",
+          "sha256": "e84cb164b47aaad63db12da876c341c59f78b6b25f9069dcdea3c1f8ca8b8f9b"
+        },
+        {
+          "path": "node_modules/@fontsource/inter/files/inter-cyrillic-ext-400-normal.woff",
+          "sha256": "5cb2f1cc0936f89a42ceae34f5a5720248dc5b8114c12b1c33a7d2ef01a9b6b9"
+        },
+        {
+          "path": "node_modules/@fontsource/inter/files/inter-cyrillic-ext-400-normal.woff2",
+          "sha256": "ef572f9187a8be018d9d9c2c6b77c1f6cb2af4199f02fc16c292ea10ab25a2cc"
+        },
+        {
+          "path": "node_modules/@fontsource/inter/files/inter-cyrillic-ext-500-normal.woff",
+          "sha256": "e250c05aebcf49971e0b25f476992dd463c28c0292ebb204d9db542fb5066ca7"
+        },
+        {
+          "path": "node_modules/@fontsource/inter/files/inter-cyrillic-ext-500-normal.woff2",
+          "sha256": "1c2db92d3cd9b237ca7c9c07af556d542f28ded1db54cd4382cf776501c5291f"
+        },
+        {
+          "path": "node_modules/@fontsource/inter/files/inter-cyrillic-ext-600-normal.woff",
+          "sha256": "a5073285409443f4653c858de58c5dc0bfc2fd33e60d8747388345e7c5ab1ab3"
+        },
+        {
+          "path": "node_modules/@fontsource/inter/files/inter-cyrillic-ext-600-normal.woff2",
+          "sha256": "509fca9c59564f9a846fa69bc647f9b050fc11abf1c9f6f3da71fb2d5ed425bd"
+        },
+        {
+          "path": "node_modules/@fontsource/inter/files/inter-cyrillic-ext-700-normal.woff",
+          "sha256": "0f3d4be2bd7018f78fa3484a5f6e9d8ce567689426643b84a47e8cabb91e5f16"
+        },
+        {
+          "path": "node_modules/@fontsource/inter/files/inter-cyrillic-ext-700-normal.woff2",
+          "sha256": "a46b99781170971e2c99a87ff7ee9f5cf90a9dfcd18175e1be6300201d030123"
+        },
+        {
+          "path": "node_modules/@fontsource/inter/files/inter-cyrillic-ext-800-normal.woff",
+          "sha256": "e87b63bf58fb0490d6a456d44cfdf58d496364f1fe8213a06787ef3cdad25fe8"
+        },
+        {
+          "path": "node_modules/@fontsource/inter/files/inter-cyrillic-ext-800-normal.woff2",
+          "sha256": "5c3f504d068a53469514175401cb3fe4d210231f44df0ef15d3da5f32d9ff445"
+        },
+        {
+          "path": "node_modules/@fontsource/inter/files/inter-greek-400-normal.woff",
+          "sha256": "bdae9d28729e8c68587d5d54e216d771a40d7a6800e824586a6e2f570c2f10df"
+        },
+        {
+          "path": "node_modules/@fontsource/inter/files/inter-greek-400-normal.woff2",
+          "sha256": "c15ddd00a9927b56f5c655a41f976f79bd848a20cce91fc14227751872a1cc27"
+        },
+        {
+          "path": "node_modules/@fontsource/inter/files/inter-greek-500-normal.woff",
+          "sha256": "86d55a4b1b9cbced7e61e76d5d44cf49d0bd1c814d3df2de67b7136ab4fdcece"
+        },
+        {
+          "path": "node_modules/@fontsource/inter/files/inter-greek-500-normal.woff2",
+          "sha256": "cc197d79d33a3615a047baae85f4d1957f6f98b8898313658e160b1d519b1b6f"
+        },
+        {
+          "path": "node_modules/@fontsource/inter/files/inter-greek-600-normal.woff",
+          "sha256": "090b24e22fc4ddf41450d13bdec81c8a74808b9fc7edaf8df06c909b177a8992"
+        },
+        {
+          "path": "node_modules/@fontsource/inter/files/inter-greek-600-normal.woff2",
+          "sha256": "9c5a897f9d9fcfe60d90631d766ae62b4bf1edd76633fa7a4b2f8c87e036789b"
+        },
+        {
+          "path": "node_modules/@fontsource/inter/files/inter-greek-700-normal.woff",
+          "sha256": "53368f53d5fc43381dcc45c8533ba2476f80337136313525f96dcbdc736616a5"
+        },
+        {
+          "path": "node_modules/@fontsource/inter/files/inter-greek-700-normal.woff2",
+          "sha256": "737c6c91cd60372d30e6540096ada83c89c9b4613cd7472e3366bf2e07ad99f1"
+        },
+        {
+          "path": "node_modules/@fontsource/inter/files/inter-greek-800-normal.woff",
+          "sha256": "67c23188c195ef3f04f4d0552a898f268a63d377924db280693f267679fc9dab"
+        },
+        {
+          "path": "node_modules/@fontsource/inter/files/inter-greek-800-normal.woff2",
+          "sha256": "18a6a4a8e29310db74c01b9d85b30e708e0b1fd8d9a2d01a259b82fe4d112422"
+        },
+        {
+          "path": "node_modules/@fontsource/inter/files/inter-greek-ext-400-normal.woff",
+          "sha256": "4f2b6f92ddfece8812e79774d446218aa6e0773ff8c2d31130fe2bdc23bd22d0"
+        },
+        {
+          "path": "node_modules/@fontsource/inter/files/inter-greek-ext-400-normal.woff2",
+          "sha256": "eadedd9e13c2582430a9fb1519eb86152fdabb483a6f66d90f8d8a52e977a1b7"
+        },
+        {
+          "path": "node_modules/@fontsource/inter/files/inter-greek-ext-500-normal.woff",
+          "sha256": "c85d11bde719108cc9a4f6f5b008087f6c36493b47395580d4f5336182b0f0c7"
+        },
+        {
+          "path": "node_modules/@fontsource/inter/files/inter-greek-ext-500-normal.woff2",
+          "sha256": "75a9ec9383a3b7a7bf7cfb94f64edf38d9cfdc5f7ffa0cbed2733627a6e4426d"
+        },
+        {
+          "path": "node_modules/@fontsource/inter/files/inter-greek-ext-600-normal.woff",
+          "sha256": "efc7aa9cce5c505dd8cc4c4daf00247fa805f37bcda96079239ba3358ab27dfb"
+        },
+        {
+          "path": "node_modules/@fontsource/inter/files/inter-greek-ext-600-normal.woff2",
+          "sha256": "399f94d75aa73403e40e2353e8c0cc75c38f7362a6ca263b3b02d9723157ffe5"
+        },
+        {
+          "path": "node_modules/@fontsource/inter/files/inter-greek-ext-700-normal.woff",
+          "sha256": "b26ed64c9135a750ad580b92152bedeef90771e74e18f6f7759a6d7adb0f1b5d"
+        },
+        {
+          "path": "node_modules/@fontsource/inter/files/inter-greek-ext-700-normal.woff2",
+          "sha256": "b7b2732ebc981b30a5463ffc850407649dba41e625aee124cc63293da4547629"
+        },
+        {
+          "path": "node_modules/@fontsource/inter/files/inter-greek-ext-800-normal.woff",
+          "sha256": "75c98d8d562061bb76f3936cf1b48246d217209497264113742e8dbbc9198af1"
+        },
+        {
+          "path": "node_modules/@fontsource/inter/files/inter-greek-ext-800-normal.woff2",
+          "sha256": "33bc91a610e159df66b874231f4c8f0037ac947fdd1b270cc60a7ee658a2c21f"
+        },
+        {
+          "path": "node_modules/@fontsource/inter/files/inter-latin-400-normal.woff",
+          "sha256": "e20fa0b4fd2dd26e4d14b3ac3cc922509c3a63fa5e910e90c614544aa042dd45"
+        },
+        {
+          "path": "node_modules/@fontsource/inter/files/inter-latin-400-normal.woff2",
+          "sha256": "8909904ab6c872eb994093482a88a28eca2cd95912d7b6fecd72103b0dc07edc"
+        },
+        {
+          "path": "node_modules/@fontsource/inter/files/inter-latin-500-normal.woff",
+          "sha256": "9b42c108da48b5ed55a3072e815ffee2d271562e6c0dd6998910e8f9c09e0a3d"
+        },
+        {
+          "path": "node_modules/@fontsource/inter/files/inter-latin-500-normal.woff2",
+          "sha256": "f3779f1efccc4bdcdf9c0a02ab95bf6bd092ed09c48c08cedc725889edd1d19f"
+        },
+        {
+          "path": "node_modules/@fontsource/inter/files/inter-latin-600-normal.woff",
+          "sha256": "6a9cb3a509b4eeaf12b7dda6c4aacac3e85d07f4201bf4dd716e332e692b87bd"
+        },
+        {
+          "path": "node_modules/@fontsource/inter/files/inter-latin-600-normal.woff2",
+          "sha256": "f9a06e79cd3a2a20951c0f0e28f66dd0e6d3fda73911d640a2125c8fcb78f21a"
+        },
+        {
+          "path": "node_modules/@fontsource/inter/files/inter-latin-700-normal.woff",
+          "sha256": "7c5ed5655730de337704d3fc94628515cd7e3d8d32368871709bf56ac0397e7a"
+        },
+        {
+          "path": "node_modules/@fontsource/inter/files/inter-latin-700-normal.woff2",
+          "sha256": "6f56409fd3d64bb85f7d070bce20749db2d66b6d63cec586cc22d1c761be2491"
+        },
+        {
+          "path": "node_modules/@fontsource/inter/files/inter-latin-800-normal.woff",
+          "sha256": "a2fdc5be8acd75fe8f3fd9de8179828d04fd884c155cd6b63fec23b33651ec88"
+        },
+        {
+          "path": "node_modules/@fontsource/inter/files/inter-latin-800-normal.woff2",
+          "sha256": "a7d0a50f15d389cad679238466bdb5fc9787aa0715719064ce25abaff042820d"
+        },
+        {
+          "path": "node_modules/@fontsource/inter/files/inter-latin-ext-400-normal.woff",
+          "sha256": "22ae8360fbad24d2af7c6c9898a346c881774dc87f7cf94bd262c48ad58d7116"
+        },
+        {
+          "path": "node_modules/@fontsource/inter/files/inter-latin-ext-400-normal.woff2",
+          "sha256": "6744a7f509ebc6ab220a6cd4ea77e898adf014f03d88dcda5d45d8a9feefb4e9"
+        },
+        {
+          "path": "node_modules/@fontsource/inter/files/inter-latin-ext-500-normal.woff",
+          "sha256": "30d2903ce97f8a89ea0e9c083b42cb8bf97e7bbb5607e7f00352815f19cb0d5b"
+        },
+        {
+          "path": "node_modules/@fontsource/inter/files/inter-latin-ext-500-normal.woff2",
+          "sha256": "2c6fbc42d315528beb06c1096df45487bf4186c4b78b8111d12c9c951f8acca2"
+        },
+        {
+          "path": "node_modules/@fontsource/inter/files/inter-latin-ext-600-normal.woff",
+          "sha256": "22ff20a6170674fb9637c2a072227be86303bb6ec52b829b9d7077405f7196a6"
+        },
+        {
+          "path": "node_modules/@fontsource/inter/files/inter-latin-ext-600-normal.woff2",
+          "sha256": "e4bdf67b0cd15ca9e184509275be95db942195d3cc2b17f6a0452f2adf75d0bf"
+        },
+        {
+          "path": "node_modules/@fontsource/inter/files/inter-latin-ext-700-normal.woff",
+          "sha256": "1761edba32014180deab3dbbe3f7156c64ef6f34bc76313ba31ce227fc9ff391"
+        },
+        {
+          "path": "node_modules/@fontsource/inter/files/inter-latin-ext-700-normal.woff2",
+          "sha256": "143f9504f1377012aa3e39c90c4354ef429cb0494b9ac0e1437f1a81e5412236"
+        },
+        {
+          "path": "node_modules/@fontsource/inter/files/inter-latin-ext-800-normal.woff",
+          "sha256": "40c8e1bb3d3723f1c2fdb3be722cc42c03afaa4317935cdab9cf520cdf5a6ce8"
+        },
+        {
+          "path": "node_modules/@fontsource/inter/files/inter-latin-ext-800-normal.woff2",
+          "sha256": "eade55593308b9e4916dd7f47826929ce3e40cad85a2b338d56e5fd1e7bf8e5e"
+        },
+        {
+          "path": "node_modules/@fontsource/inter/files/inter-vietnamese-400-normal.woff",
+          "sha256": "54aa42d325bcdfd623ecb9eac4a5e3c6420c63d7b86e9d8545fb479f653beb57"
+        },
+        {
+          "path": "node_modules/@fontsource/inter/files/inter-vietnamese-400-normal.woff2",
+          "sha256": "547ad9fdaeb0ae43487f4b8a02e47c36553c0c0cb73c8aa98f93b7b615f6b55d"
+        },
+        {
+          "path": "node_modules/@fontsource/inter/files/inter-vietnamese-500-normal.woff",
+          "sha256": "18a4a09f751671cd8929d7c66e8fe7d820b511c36e51cf6047ffceab88eec4a4"
+        },
+        {
+          "path": "node_modules/@fontsource/inter/files/inter-vietnamese-500-normal.woff2",
+          "sha256": "44e36aa5a8f12130029a29bb0e6695d0262b67446ce321e878b1fb56162b5de6"
+        },
+        {
+          "path": "node_modules/@fontsource/inter/files/inter-vietnamese-600-normal.woff",
+          "sha256": "24a01e7bd947aeef91ae8f7b8edeb23fadaf5ceda34a610ce62d2bbdaea57e83"
+        },
+        {
+          "path": "node_modules/@fontsource/inter/files/inter-vietnamese-600-normal.woff2",
+          "sha256": "1aeb94ae9db052a4a2fe6f3046f928cff1fdbd7abdf870a9a01c13cae6faeba5"
+        },
+        {
+          "path": "node_modules/@fontsource/inter/files/inter-vietnamese-700-normal.woff",
+          "sha256": "412023ab2f41333b373e2c6eb2a3ebab806fddd610015d2ae8cd4f4314c7ba92"
+        },
+        {
+          "path": "node_modules/@fontsource/inter/files/inter-vietnamese-700-normal.woff2",
+          "sha256": "5fafa3829a16d9ea5ac3a67c51e54186353122790b604a3e361f96cab188da8b"
+        },
+        {
+          "path": "node_modules/@fontsource/inter/files/inter-vietnamese-800-normal.woff",
+          "sha256": "46ce148ad9022e973f68e3e69442d950a30c58285c57d81caa813424a4e9a38d"
+        },
+        {
+          "path": "node_modules/@fontsource/inter/files/inter-vietnamese-800-normal.woff2",
+          "sha256": "37852ffd38e1064bd06a0b95aed12cbb4f248c6f0b5ffcf9c1a4ffc40500b22c"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+# Dependencies and generated application output
+node_modules/
+runtime/
+dist/
+build/
+coverage/
+.cache/
+*.log
+
+# Credentials and local identity
+.env
+.env.*
+!.env.example
+.credentials/
+credentials/
+*.dpapi
+*.pem
+*.key
+*.p12
+service-account*.json
+.firebaserc
+.devin/
+.auth/
+browser-profile/
+
+# Private research, media, source captures and session data
+private/
+research/
+reference-captures/
+provider-cache/
+.runtime/
+.session/
+artifacts/raw/
+artifacts/private/
+*.har
+*.mp3
+*.mp4
+*.wav
+*.m4a
+*.flac
+playwright-report/
+test-results/
+ui-receipts/
+.DS_Store
+Thumbs.db
+
+# Operator-supplied runtime state must never be published
+*.private.json
+deploy/runtime.json
+deploy/runtime.*.json
+!deploy/runtime.example.json
+setup-approved.json
+profile.json
+desktop.json
+accounting.jsonl
+application_default_credentials.json
+*.pending
+*.bundle
+*.zip
+
+# Private working notes and handoffs
+/AGENTS.md
+/handoffs/
+/prompts-private/

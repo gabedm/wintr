@@ -1,0 +1,21 @@
+GeoNames city suggestions
+https://www.geonames.org/
+
+Derived from the GeoNames cities15000, admin1CodesASCII and countryInfo
+extracts downloaded on 31 October 2026. GeoNames contributors provide this
+data under Creative Commons Attribution 4.0 International (CC BY 4.0):
+https://creativecommons.org/licenses/by/4.0/
+
+Wintr retains public city IDs, names, ASCII names, country/admin1 codes and
+population for local prefix matching and ranking. Names longer than 100
+characters are omitted. The GB display label is shortened to UK. Coordinates,
+alternate-name lists and other source columns are omitted.
+
+Coverage is cities over 15,000 people or capitals. This is not an exhaustive
+list of places, and listing a city does not imply concert availability.
+You can still enter another city directly. No suggestion query goes to
+GeoNames; the index is served with Wintr. The city/country you apply filters
+the received event list on this device and sends no provider request.
+
+GeoNames data is provided as is, without warranty of accuracy, timeliness
+or completeness. Extract descriptions: https://download.geonames.org/export/dump/readme.txt
