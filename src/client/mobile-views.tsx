@@ -15,7 +15,7 @@ export function MobileNavigation({ tab, onSelect, busy = false }: { tab: MobileT
 /** A verified thumbnail when available; otherwise an original neutral record sleeve. */
 export function SongArtwork({ song }: { song: SavedSong }) {
   const [failedUrl, setFailedUrl] = useState<string | null>(null);
-  const url = song.artwork && isAppleArtwork(song.artwork, song.url) ? song.artwork.url : null;
+  const url = import.meta.env.VITE_HOSTED_ARTWORK !== 'placeholder' && song.artwork && isAppleArtwork(song.artwork, song.url) ? song.artwork.url : null;
   if (url && url !== failedUrl) return <span className="song-artwork" aria-hidden="true"><img src={url} alt="" loading="lazy" decoding="async" referrerPolicy="no-referrer" onError={() => setFailedUrl(url)} /></span>;
   return <span className="song-artwork" aria-hidden="true"><svg viewBox="0 0 80 80"><circle cx="40" cy="40" r="28" fill="currentColor" /><circle cx="40" cy="40" r="20" fill="none" stroke="var(--canvas)" strokeOpacity=".22" /><circle cx="40" cy="40" r="13" fill="none" stroke="var(--canvas)" strokeOpacity=".22" /><circle cx="40" cy="40" r="4" fill="var(--canvas)" /></svg><span>{song.title.slice(0, 1).toLocaleUpperCase()}</span></span>;
 }

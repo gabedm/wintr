@@ -14,7 +14,14 @@ const flush = async () => { await act(async () => { for(let i=0;i<15;i++) await 
 const click = async (name: string) => { const button=[...host.querySelectorAll<HTMLButtonElement>('button')].find(b=>b.getAttribute('aria-label')===name||b.textContent===name)!; expect(button).toBeTruthy(); await act(async()=>button.click()); await flush(); };
 const input = async (field: HTMLInputElement, text: string) => { await act(async()=>{ Object.getOwnPropertyDescriptor(HTMLInputElement.prototype,'value')!.set!.call(field,text); field.dispatchEvent(new Event('input',{bubbles:true})); }); };
 beforeEach(()=>{host=document.createElement('div');document.body.append(host);root=createRoot(host);});
-afterEach(()=>{act(()=>root.unmount());host.remove();vi.restoreAllMocks();});
+afterEach(()=>{act(()=>root.unmount());host.remove();vi.restoreAllMocks();vi.unstubAllEnvs();});
+it('uses original placeholders in hosted Home and Library without loading Apple covers while retaining exact Music links',()=>{
+ vi.stubEnv('VITE_HOSTED_ARTWORK','placeholder');
+ const saved={...song,artwork:{url:'https://is1-ssl.mzstatic.com/image/thumb/Music001/v4/invented/100x100bb.jpg',storeUrl:song.url}};
+ act(()=>root.render(<><RecentSongs songs={[saved]}/><LibraryScreen view={{songs:[saved],state:'ready',notice:null}} searchOpen={false} onCloseSearch={()=>{}} onRemove={async()=>true} onClear={async()=>true}/></>));
+ expect(host.querySelectorAll('.song-artwork img')).toHaveLength(0);expect(host.querySelectorAll('.song-artwork svg')).toHaveLength(2);
+ expect(host.querySelectorAll('.apple-music-link')).toHaveLength(2);for(const link of host.querySelectorAll('.apple-music-link'))expect(link.getAttribute('href')).toBe(song.url);
+});
 it('keeps exactly three labelled, current navigation controls and no search tab',()=>{const select=vi.fn(); act(()=>root.render(<MobileNavigation tab="library" onSelect={select}/>)); expect([...host.querySelectorAll('button')].map(b=>b.textContent)).toEqual(['Home','Library','Concerts']); expect(host.querySelector('[aria-current="page"]')?.textContent).toBe('Library'); act(()=>host.querySelectorAll<HTMLButtonElement>('button')[2]!.click()); expect(select).toHaveBeenCalledWith('concerts');});
 it('never leaves a hidden Library search filtering the song list',async()=>{
   const draw=(searchOpen:boolean)=>act(()=>root.render(<LibraryScreen view={{songs:[song,other],state:'ready',notice:null}} searchOpen={searchOpen} onCloseSearch={()=>{}} onRemove={async()=>true} onClear={async()=>true}/>));

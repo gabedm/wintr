@@ -21,6 +21,8 @@ docker build -t wintr .
 
 The Dockerfile runs the compiled hosted entry as an unprivileged user. It serves the UI, API and WebSocket endpoint together. The image contains no runtime configuration or credentials.
 
+The container pins its Node base image by digest and builds with `VITE_HOSTED_ARTWORK=placeholder`. Hosted Home and Library show neutral record-sleeve artwork while keeping verified Apple Music links; they do not load Apple cover images. The ordinary local build retains its existing artwork behaviour. This build flag is public UI configuration, not a credential.
+
 ## Configure the server
 
 `deploy/runtime.example.json` describes the outer configuration: `bindings`, `serviceAccountEmail` and `storefront`. Its `bindings: null` is intentionally **not runnable**. Create your real file outside the repository, then mount it from Secret Manager and set `WINTR_RUNTIME_CONFIG_FILE` to the absolute mounted path.
