@@ -1,3 +1,8 @@
 allowBuilds:
   esbuild: false
   protobufjs: false
+
+# Pin patched transitive globbing utilities while retaining the SDK versions.
+overrides:
+  glob@10.5.0: 14.0.2
+  minimatch: 11.0.1
